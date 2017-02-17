@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Lego\Widget\Form | Laravel Lego API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Lego_Widget_Form" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel Lego API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Lego.html">Lego</a></li>
+                                        <li><a href="../../Lego/Widget.html">Widget</a></li>
+    
+                <li>Form</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Form
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Form</strong>        extends <a href="../../Lego/Widget/Widget.html"><abbr title="Lego\Widget\Widget">Widget</abbr></a>        implements
+        <a href="../../Lego/Foundation/Operators/HasMode.html"><abbr title="Lego\Foundation\Operators\HasMode">HasMode</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class Form</p>                    </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Foundation/Operators/ModeOperator.html"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    推荐宿主类实现接口 HasMode
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Widget/Operators/EloquentOperator.html"><abbr title="Lego\Widget\Operators\EloquentOperator">EloquentOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Foundation/Operators/MessageOperator.html"><abbr title="Lego\Foundation\Operators\MessageOperator">MessageOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Foundation/Operators/InitializeOperator.html"><abbr title="Lego\Foundation\Operators\InitializeOperator">InitializeOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Foundation/Operators/RenderStringOperator.html"><abbr title="Lego\Foundation\Operators\RenderStringOperator">RenderStringOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    对象转换为字符串时的工具函数, 需要宿主类实现 <code>public function render() : string</code> 函数
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Widget/Operators/FieldOperator.html"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Field 相关逻辑
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Widget/Operators/GroupOperator.html"><abbr title="Lego\Widget\Operators\GroupOperator">GroupOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Widget 中 Field 的分组功能
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Widget/Operators/RequestOperator.html"><abbr title="Lego\Widget\Operators\RequestOperator">RequestOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Lego/Widget/Operators/ButtonsOperator.html"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initializeMessageOperator">initializeMessageOperator</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/MessageOperator.html#method_initializeMessageOperator"><abbr title="Lego\Foundation\Operators\MessageOperator">MessageOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messages">messages</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/MessageOperator.html#method_messages"><abbr title="Lego\Foundation\Operators\MessageOperator">MessageOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errors">errors</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/MessageOperator.html#method_errors"><abbr title="Lego\Foundation\Operators\MessageOperator">MessageOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_triggerInitialize">triggerInitialize</a>()
+        
+                                            <p>触发函数, 推荐在构造函数中调用</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/InitializeOperator.html#method_triggerInitialize"><abbr title="Lego\Foundation\Operators\InitializeOperator">InitializeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initialize">initialize</a>()
+        
+                                            <p>初始化操作, 在类构造函数中调用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initializeTraits">initializeTraits</a>()
+        
+                                            <p>初始化插件</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/InitializeOperator.html#method_initializeTraits"><abbr title="Lego\Foundation\Operators\InitializeOperator">InitializeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>()
+        
+                                            <p>渲染当前对象</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/RenderStringOperator.html#method___toString"><abbr title="Lego\Foundation\Operators\RenderStringOperator">RenderStringOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\HtmlString">HtmlString</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toHtmlString">toHtmlString</a>()
+        
+                                            <p>渲染为 HtmlString 对象, 在 view 中显示时可以直接打印, 无需关闭转义</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/RenderStringOperator.html#method_toHtmlString"><abbr title="Lego\Foundation\Operators\RenderStringOperator">RenderStringOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initializeFieldOperator">initializeFieldOperator</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_initializeFieldOperator"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fields">fields</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_fields"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_field">field</a>($fieldName)
+        
+                                            <p>根据 name 获取指定 Field</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_field"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addField">addField</a>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_addField"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fieldAdded">fieldAdded</a>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerFieldOperatorMagicCall">registerFieldOperatorMagicCall</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_registerFieldOperatorMagicCall"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processFields">processFields</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_processFields"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_syncFieldsValue">syncFieldsValue</a>()
+        
+                                            <p>sync field's value to source.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_syncFieldsValue"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Widget\Operators\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_required">required</a>(array[]|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[] $fields = [])
+        
+                                            <p>Mark Fields as Required.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/FieldOperator.html#method_required"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addGroup">addGroup</a>($groupName, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/GroupOperator.html#method_addGroup"><abbr title="Lego\Widget\Operators\GroupOperator">GroupOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPost">isPost</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/RequestOperator.html#method_isPost"><abbr title="Lego\Widget\Operators\RequestOperator">RequestOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isGet">isGet</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/RequestOperator.html#method_isGet"><abbr title="Lego\Widget\Operators\RequestOperator">RequestOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buttonLocations">buttonLocations</a>()
+        
+                                            <p>按钮位置列表，eg：[left-bottom, right-bottom, left-top, .</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_buttonLocations"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initializeButtonsOperator">initializeButtonsOperator</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_initializeButtonsOperator"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getButtons">getButtons</a>($location)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_getButtons"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addButton">addButton</a>($location, $text, $url = null, $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_addButton"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeButton">removeButton</a>($location, $text)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_removeButton"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>($data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Widget.html#method___construct"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareData">prepareData</a>($data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Data/Data.html"><abbr title="Lego\Data\Data">Data</abbr></a>|<a href="../../Lego/Data/Table/Table.html"><abbr title="Lego\Data\Table\Table">Table</abbr></a>|<a href="../../Lego/Data/Row/Row.html"><abbr title="Lego\Data\Row\Row">Row</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_data">data</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Widget.html#method_data"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_view">view</a>($view, array $data = [], array $mergeData = [])
+        
+                                            <p>对 view() 的封装</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Widget.html#method_view"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Widget\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewriteResponse">rewriteResponse</a>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $response)
+        
+                                            <p>重写此次请求的 Response</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Widget.html#method_rewriteResponse"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_response">response</a>(mixed $response)
+        
+                                            <p>Response 的封装</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Widget.html#method_response"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_process">process</a>()
+        
+                                            <p>Widget 的所有数据处理都放在此函数中, 渲染 view 前调用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMode">getMode</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_getMode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isMode">isMode</a>($mode)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isMode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isReadonly">isReadonly</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isReadonly"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEditable">isEditable</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isEditable"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDisabled">isDisabled</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isDisabled"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modeIsModified">modeIsModified</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_modeIsModified"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mode">mode</a>($mode, $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_mode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_readonly">readonly</a>($condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_readonly"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_editable">editable</a>($condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_editable"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disabled">disabled</a>($condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_disabled"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderByMode">renderByMode</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderByMode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderEditable">renderEditable</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderEditable"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderReadonly">renderReadonly</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderReadonly"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderDisabled">renderDisabled</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderDisabled"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Model">Model</abbr>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_model">model</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Operators/EloquentOperator.html#method_model"><abbr title="Lego\Widget\Operators\EloquentOperator">EloquentOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Widget/Form.html"><abbr title="Lego\Widget\Form">Form</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_success">success</a>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $success)
+        
+                                            <p>保存成功后的 Response</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Widget\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onSubmit">onSubmit</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
+        
+                                            <p>通过此函数传入数据处理逻辑，使用此函数后，将不再调用默认的数据处理逻辑（保存到 Model）</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_initializeMessageOperator">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/MessageOperator.html#method_initializeMessageOperator"><abbr title="Lego\Foundation\Operators\MessageOperator">MessageOperator</abbr></a> at         line 19</div>
+        <code>            protected        
+    <strong>initializeMessageOperator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messages">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/MessageOperator.html#method_messages"><abbr title="Lego\Foundation\Operators\MessageOperator">MessageOperator</abbr></a> at         line 25</div>
+        <code>                    
+    <strong>messages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errors">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/MessageOperator.html#method_errors"><abbr title="Lego\Foundation\Operators\MessageOperator">MessageOperator</abbr></a> at         line 30</div>
+        <code>                    
+    <strong>errors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_triggerInitialize">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/InitializeOperator.html#method_triggerInitialize"><abbr title="Lego\Foundation\Operators\InitializeOperator">InitializeOperator</abbr></a> at         line 8</div>
+        <code>            protected        
+    <strong>triggerInitialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>触发函数, 推荐在构造函数中调用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initialize">
+        <div class="location">at         line 38</div>
+        <code>            protected        
+    <strong>initialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>初始化操作, 在类构造函数中调用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeTraits">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/InitializeOperator.html#method_initializeTraits"><abbr title="Lego\Foundation\Operators\InitializeOperator">InitializeOperator</abbr></a> at         line 27</div>
+        <code>            protected        
+    <strong>initializeTraits</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>初始化插件</p>                    <p>如果插件实现了 initializePluginName() 函数, 会在此处调用</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at         line 164</div>
+        <code>                    string
+    <strong>render</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>渲染当前对象</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/RenderStringOperator.html#method___toString"><abbr title="Lego\Foundation\Operators\RenderStringOperator">RenderStringOperator</abbr></a> at         line 21</div>
+        <code>final                    
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toHtmlString">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/RenderStringOperator.html#method_toHtmlString"><abbr title="Lego\Foundation\Operators\RenderStringOperator">RenderStringOperator</abbr></a> at         line 31</div>
+        <code>final                    <abbr title="Illuminate\Support\HtmlString">HtmlString</abbr>
+    <strong>toHtmlString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>渲染为 HtmlString 对象, 在 view 中显示时可以直接打印, 无需关闭转义</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\HtmlString">HtmlString</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeFieldOperator">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_initializeFieldOperator"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 19</div>
+        <code>            protected        
+    <strong>initializeFieldOperator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fields">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_fields"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 33</div>
+        <code>                    
+    <strong>fields</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_field">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_field"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 43</div>
+        <code>                    <a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|null
+    <strong>field</strong>($fieldName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>根据 name 获取指定 Field</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addField">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_addField"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 48</div>
+        <code>            protected        
+    <strong>addField</strong>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fieldAdded">
+        <div class="location">at         line 69</div>
+        <code>            protected        
+    <strong>fieldAdded</strong>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerFieldOperatorMagicCall">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_registerFieldOperatorMagicCall"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 60</div>
+        <code>            protected        
+    <strong>registerFieldOperatorMagicCall</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processFields">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_processFields"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 74</div>
+        <code>            protected        
+    <strong>processFields</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_syncFieldsValue">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_syncFieldsValue"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 86</div>
+        <code>            protected        
+    <strong>syncFieldsValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>sync field's value to source.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_required">
+        <div class="location">in <a href="../../Lego/Widget/Operators/FieldOperator.html#method_required"><abbr title="Lego\Widget\Operators\FieldOperator">FieldOperator</abbr></a> at         line 99</div>
+        <code>                    <abbr title="Lego\Widget\Operators\$this">$this</abbr>
+    <strong>required</strong>(array[]|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[] $fields = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark Fields as Required.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array[]|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]</td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Widget\Operators\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addGroup">
+        <div class="location">in <a href="../../Lego/Widget/Operators/GroupOperator.html#method_addGroup"><abbr title="Lego\Widget\Operators\GroupOperator">GroupOperator</abbr></a> at         line 19</div>
+        <code>                    
+    <strong>addGroup</strong>($groupName, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$groupName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPost">
+        <div class="location">in <a href="../../Lego/Widget/Operators/RequestOperator.html#method_isPost"><abbr title="Lego\Widget\Operators\RequestOperator">RequestOperator</abbr></a> at         line 7</div>
+        <code>            protected        
+    <strong>isPost</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isGet">
+        <div class="location">in <a href="../../Lego/Widget/Operators/RequestOperator.html#method_isGet"><abbr title="Lego\Widget\Operators\RequestOperator">RequestOperator</abbr></a> at         line 12</div>
+        <code>            protected        
+    <strong>isGet</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buttonLocations">
+        <div class="location">in <a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_buttonLocations"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a> at         line 13</div>
+        <code>    abstract                array
+    <strong>buttonLocations</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>按钮位置列表，eg：[left-bottom, right-bottom, left-top, .</p>                    <p>..]</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeButtonsOperator">
+        <div class="location">in <a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_initializeButtonsOperator"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a> at         line 15</div>
+        <code>            protected        
+    <strong>initializeButtonsOperator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getButtons">
+        <div class="location">in <a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_getButtons"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a> at         line 29</div>
+        <code>                    
+    <strong>getButtons</strong>($location)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addButton">
+        <div class="location">in <a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_addButton"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a> at         line 35</div>
+        <code>                    
+    <strong>addButton</strong>($location, $text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeButton">
+        <div class="location">in <a href="../../Lego/Widget/Operators/ButtonsOperator.html#method_removeButton"><abbr title="Lego\Widget\Operators\ButtonsOperator">ButtonsOperator</abbr></a> at         line 43</div>
+        <code>                    
+    <strong>removeButton</strong>($location, $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method___construct"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 39</div>
+        <code>                    
+    <strong>__construct</strong>($data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareData">
+        <div class="location">at         line 30</div>
+        <code>            protected        
+    <strong>prepareData</strong>($data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_data">
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_data"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 52</div>
+        <code>                    <a href="../../Lego/Data/Data.html"><abbr title="Lego\Data\Data">Data</abbr></a>|<a href="../../Lego/Data/Table/Table.html"><abbr title="Lego\Data\Table\Table">Table</abbr></a>|<a href="../../Lego/Data/Row/Row.html"><abbr title="Lego\Data\Row\Row">Row</abbr></a>
+    <strong>data</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Data/Data.html"><abbr title="Lego\Data\Data">Data</abbr></a>|<a href="../../Lego/Data/Table/Table.html"><abbr title="Lego\Data\Table\Table">Table</abbr></a>|<a href="../../Lego/Data/Row/Row.html"><abbr title="Lego\Data\Row\Row">Row</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_view">
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_view"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 65</div>
+        <code>                    mixed
+    <strong>view</strong>($view, array $data = [], array $mergeData = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>对 view() 的封装</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$mergeData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewriteResponse">
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_rewriteResponse"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 76</div>
+        <code>            protected        <abbr title="Lego\Widget\$this">$this</abbr>
+    <strong>rewriteResponse</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $response)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>重写此次请求的 Response</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a>|string</td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Widget\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_response">
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_response"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 89</div>
+        <code>final                    mixed
+    <strong>response</strong>(mixed $response)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Response 的封装</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">at         line 104</div>
+        <code>                    
+    <strong>process</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Widget 的所有数据处理都放在此函数中, 渲染 view 前调用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMode">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_getMode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 27</div>
+        <code>                    
+    <strong>getMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMode">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isMode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 32</div>
+        <code>                    
+    <strong>isMode</strong>($mode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReadonly">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isReadonly"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 37</div>
+        <code>                    
+    <strong>isReadonly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEditable">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isEditable"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 42</div>
+        <code>                    
+    <strong>isEditable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDisabled">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_isDisabled"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 47</div>
+        <code>                    
+    <strong>isDisabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modeIsModified">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_modeIsModified"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 52</div>
+        <code>                    
+    <strong>modeIsModified</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mode">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_mode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 57</div>
+        <code>                    
+    <strong>mode</strong>($mode, $condition = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_readonly">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_readonly"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 72</div>
+        <code>                    
+    <strong>readonly</strong>($condition = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_editable">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_editable"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 77</div>
+        <code>                    
+    <strong>editable</strong>($condition = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disabled">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_disabled"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 82</div>
+        <code>                    
+    <strong>disabled</strong>($condition = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderByMode">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderByMode"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 87</div>
+        <code>            protected        
+    <strong>renderByMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderEditable">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderEditable"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 92</div>
+        <code>            protected        
+    <strong>renderEditable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderReadonly">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderReadonly"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 97</div>
+        <code>            protected        
+    <strong>renderReadonly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderDisabled">
+        <div class="location">in <a href="../../Lego/Foundation/Operators/ModeOperator.html#method_renderDisabled"><abbr title="Lego\Foundation\Operators\ModeOperator">ModeOperator</abbr></a> at         line 105</div>
+        <code>            protected        
+    <strong>renderDisabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_model">
+        <div class="location">in <a href="../../Lego/Widget/Operators/EloquentOperator.html#method_model"><abbr title="Lego\Widget\Operators\EloquentOperator">EloquentOperator</abbr></a> at         line 11</div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Model">Model</abbr>|null
+    <strong>model</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_success">
+        <div class="location">at         line 48</div>
+        <code>                    <a href="../../Lego/Widget/Form.html"><abbr title="Lego\Widget\Form">Form</abbr></a>
+    <strong>success</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $success)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>保存成功后的 Response</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a>|string</td>
+                <td>$success</td>
+                <td>回调 or 跳转链接</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Widget/Form.html"><abbr title="Lego\Widget\Form">Form</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onSubmit">
+        <div class="location">at         line 97</div>
+        <code>                    <abbr title="Lego\Widget\$this">$this</abbr>
+    <strong>onSubmit</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>通过此函数传入数据处理逻辑，使用此函数后，将不再调用默认的数据处理逻辑（保存到 Model）</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Widget\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
