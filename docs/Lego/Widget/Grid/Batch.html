@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Field\Concerns\ValueOperator | Laravel Lego API</title>
+    <title>Lego\Widget\Grid\Batch | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Field_Concerns_ValueOperator" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Widget_Grid_Batch" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -65,70 +65,35 @@
 
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
-                <li><span class="label label-default">trait</span></li>
+                <li><span class="label label-default">class</span></li>
                                                             <li><a href="../../../Lego.html">Lego</a></li>
-                                        <li><a href="../../../Lego/Field.html">Field</a></li>
-                                        <li><a href="../../../Lego/Field/Concerns.html">Concerns</a></li>
+                                        <li><a href="../../../Lego/Widget.html">Widget</a></li>
+                                        <li><a href="../../../Lego/Widget/Grid.html">Grid</a></li>
     
-                <li>ValueOperator</li>
+                <li>Batch</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            ValueOperator
+            Batch
                 
         </h1>
     </div>
 
-    <p>    trait
-    <strong>ValueOperator</strong>
+    <p>    class
+    <strong>Batch</strong>
 </p>
 
         
     
 
+            <div class="description">
+            <p>Grid 批处理的逻辑</p>                    </div>
     
     
     
-            <h2>Properties</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td class="type" id="property_originalValue">
-                                        protected                                        
-                </td>
-                <td>$originalValue</td>
-                <td class="last">原始值，一般读取自数据库等数据源</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_newValue">
-                                        protected                                        
-                </td>
-                <td>$newValue</td>
-                <td class="last">新值，一般为当前请求中产生的值</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_displayValue">
-                                        protected                                        
-                </td>
-                <td>$displayValue</td>
-                <td class="last">展示值，仅用于展示</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_defaultValue">
-                                        protected                                        
-                </td>
-                <td>$defaultValue</td>
-                <td class="last">默认值</td>
-                <td></td>
-            </tr>
-            </table>
-
     
             <h2>Methods</h2>
 
@@ -138,7 +103,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getOriginalValue">getOriginalValue</a>()
+                    <a href="#method___construct">__construct</a>($name, <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query, <a target="_blank" href="http://php.net/Closure">Closure</a> $action = null, $primaryKey = &#039;id&#039;)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -149,7 +114,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setOriginalValue">setOriginalValue</a>($originalValue)
+                    <a href="#method_name">name</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -160,7 +125,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getNewValue">getNewValue</a>()
+                    <a href="#method_getPrimaryKey">getPrimaryKey</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -171,7 +136,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setNewValue">setNewValue</a>($value)
+                    <a href="#method_url">url</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -182,7 +147,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getDisplayValue">getDisplayValue</a>()
+                    <a href="#method_primaryKey">primaryKey</a>($key)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -193,7 +158,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setDisplayValue">setDisplayValue</a>($displayValue)
+                    <a href="#method_form">form</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $builder)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -204,39 +169,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_default">default</a>($value)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getDefaultValue">getDefaultValue</a>()
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_takeDefaultInputValue">takeDefaultInputValue</a>()
-        
-                                            <p>输入框中显示给用户的值</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_takeDefaultShowValue">takeDefaultShowValue</a>()
+                    <a href="#method_action">action</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $action)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -249,29 +182,10 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_getOriginalValue">
-        <div class="location">at         line 25</div>
+                    <h3 id="method___construct">
+        <div class="location">at         line 29</div>
         <code>                    
-    <strong>getOriginalValue</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setOriginalValue">
-        <div class="location">at         line 30</div>
-        <code>                    
-    <strong>setOriginalValue</strong>($originalValue)
+    <strong>__construct</strong>($name, <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query, <a target="_blank" href="http://php.net/Closure">Closure</a> $action = null, $primaryKey = &#039;id&#039;)
         </code>
     </h3>
     <div class="details">
@@ -284,7 +198,22 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$originalValue</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$primaryKey</td>
                 <td></td>
             </tr>
             </table>
@@ -297,10 +226,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getNewValue">
-        <div class="location">at         line 37</div>
+                    <h3 id="method_name">
+        <div class="location">at         line 40</div>
         <code>                    
-    <strong>getNewValue</strong>()
+    <strong>name</strong>()
         </code>
     </h3>
     <div class="details">
@@ -316,10 +245,48 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setNewValue">
-        <div class="location">at         line 42</div>
+                    <h3 id="method_getPrimaryKey">
+        <div class="location">at         line 45</div>
         <code>                    
-    <strong>setNewValue</strong>($value)
+    <strong>getPrimaryKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_url">
+        <div class="location">at         line 50</div>
+        <code>                    
+    <strong>url</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_primaryKey">
+        <div class="location">at         line 55</div>
+        <code>                    
+    <strong>primaryKey</strong>($key)
         </code>
     </h3>
     <div class="details">
@@ -332,7 +299,7 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$value</td>
+                <td>$key</td>
                 <td></td>
             </tr>
             </table>
@@ -345,29 +312,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getDisplayValue">
-        <div class="location">at         line 49</div>
+                    <h3 id="method_form">
+        <div class="location">at         line 62</div>
         <code>                    
-    <strong>getDisplayValue</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setDisplayValue">
-        <div class="location">at         line 54</div>
-        <code>                    
-    <strong>setDisplayValue</strong>($displayValue)
+    <strong>form</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $builder)
         </code>
     </h3>
     <div class="details">
@@ -379,8 +327,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$displayValue</td>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$builder</td>
                 <td></td>
             </tr>
             </table>
@@ -393,10 +341,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_default">
-        <div class="location">at         line 61</div>
+                    <h3 id="method_action">
+        <div class="location">at         line 69</div>
         <code>                    
-    <strong>default</strong>($value)
+    <strong>action</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $action)
         </code>
     </h3>
     <div class="details">
@@ -408,71 +356,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$value</td>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$action</td>
                 <td></td>
             </tr>
             </table>
 
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getDefaultValue">
-        <div class="location">at         line 68</div>
-        <code>                    
-    <strong>getDefaultValue</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_takeDefaultInputValue">
-        <div class="location">at         line 81</div>
-        <code>                    
-    <strong>takeDefaultInputValue</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>输入框中显示给用户的值</p>                                </div>
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_takeDefaultShowValue">
-        <div class="location">at         line 90</div>
-        <code>                    
-    <strong>takeDefaultShowValue</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
             
             
             

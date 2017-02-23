@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Field\Provider\Number | Laravel Lego API</title>
+    <title>Lego\Field\Provider\Hidden | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Field_Provider_Number" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Field_Provider_Hidden" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -70,20 +70,20 @@
                                         <li><a href="../../../Lego/Field.html">Field</a></li>
                                         <li><a href="../../../Lego/Field/Provider.html">Provider</a></li>
     
-                <li>Number</li>
+                <li>Hidden</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            Number
+            Hidden
                 
         </h1>
     </div>
 
     <p>    class
-    <strong>Number</strong>        extends <a href="../../../Lego/Field/Provider/Text.html"><abbr title="Lego\Field\Provider\Text">Text</abbr></a>
+    <strong>Hidden</strong>        extends <a href="../../../Lego/Field/Provider/Text.html"><abbr title="Lego\Field\Provider\Text">Text</abbr></a>
 </p>
 
         
@@ -94,15 +94,6 @@
 
         
     <div class="container-fluid underlined">
-                    <div class="row">
-                <div class="col-md-6">
-                                            <a href="../../../Lego/Field/Concerns/FilterWhereEquals.html"><abbr title="Lego\Field\Concerns\FilterWhereEquals">FilterWhereEquals</abbr></a>
-                                            
-                </div>
-                <div class="col-md-6">
-                    
-                </div>
-            </div>
                     <div class="row">
                 <div class="col-md-6">
                                             <a href="../../../Lego/Field/Concerns/FilterWhereContains.html"><abbr title="Lego\Field\Concerns\FilterWhereContains">FilterWhereContains</abbr></a>
@@ -261,11 +252,11 @@
             </tr>
                     <tr>
                 <td class="type" id="property_inputType">
-                                        protected                                        string
+                                        protected                                        
                 </td>
                 <td>$inputType</td>
-                <td class="last">&lt;input type="<strong>THIS_VALUE</strong>" .</td>
-                <td><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HtmlOperator.html#property_inputType"><abbr title="Lego\Field\Concerns\HtmlOperator">HtmlOperator</abbr></a></small></td>
+                <td class="last"></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_fieldContainerAttributes">
@@ -408,7 +399,7 @@
                     <a href="#method_render">render</a>()
         
                                             <p>渲染当前对象</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/RenderStringOperator.html#method_render"><abbr title="Lego\Foundation\Concerns\RenderStringOperator">RenderStringOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -561,7 +552,7 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderEditable"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1153,38 +1144,6 @@
                                     </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Field.html#method_view"><abbr title="Lego\Field\Field">Field</abbr></a></small></div>
             </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_min">min</a>($value)
-        
-                                            <p>Html Attributes</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_max">max</a>($value)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_step">step</a>($value)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
             </div>
 
 
@@ -1271,7 +1230,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize">
-        <div class="location">at         line 12</div>
+        <div class="location">at         line 7</div>
         <code>            protected        
     <strong>initialize</strong>()
         </code>
@@ -1313,8 +1272,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at         line 46</div>
-        <code>                    string
+        <div class="location">in <a href="../../../Lego/Foundation/Concerns/RenderStringOperator.html#method_render"><abbr title="Lego\Foundation\Concerns\RenderStringOperator">RenderStringOperator</abbr></a> at         line 17</div>
+        <code>    abstract                string
     <strong>render</strong>()
         </code>
     </h3>
@@ -1656,7 +1615,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderEditable">
-        <div class="location">at         line 51</div>
+        <div class="location">in <a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderEditable"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a> at         line 92</div>
         <code>            protected        
     <strong>renderEditable</strong>()
         </code>
@@ -3178,104 +3137,6 @@ $field->scope(function (Query $filter, $value) {
                     <tr>
                 <td></td>
                 <td>$data</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_min">
-        <div class="location">at         line 24</div>
-        <code>                    
-    <strong>min</strong>($value)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Html Attributes</p>                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td></td>
-                <td>$value</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>http://www.w3schools.com/html/html_form_input_types.asp</td>
-                <td></td>
-            </tr>
-            </table>
-
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_max">
-        <div class="location">at         line 30</div>
-        <code>                    
-    <strong>max</strong>($value)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td></td>
-                <td>$value</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_step">
-        <div class="location">at         line 36</div>
-        <code>                    
-    <strong>step</strong>($value)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td></td>
-                <td>$value</td>
                 <td></td>
             </tr>
             </table>

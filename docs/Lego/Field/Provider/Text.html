@@ -159,6 +159,15 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                                            <a href="../../../Lego/Field/Concerns/FieldContainer.html"><abbr title="Lego\Field\Concerns\FieldContainer">FieldContainer</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Field 的上一层元素，Bootstrap form 中的 .form-group
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                                             <a href="../../../Lego/Field/Concerns/ValidationOperator.html"><abbr title="Lego\Field\Concerns\ValidationOperator">ValidationOperator</abbr></a>
                                             
                 </div>
@@ -248,6 +257,14 @@
                 <td>$inputType</td>
                 <td class="last">&lt;input type="<strong>THIS_VALUE</strong>" .</td>
                 <td><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HtmlOperator.html#property_inputType"><abbr title="Lego\Field\Concerns\HtmlOperator">HtmlOperator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fieldContainerAttributes">
+                                        protected                                        
+                </td>
+                <td>$fieldContainerAttributes</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Lego/Field/Concerns/FieldContainer.html#property_fieldContainerAttributes"><abbr title="Lego\Field\Concerns\FieldContainer">FieldContainer</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_originalValue">
@@ -703,6 +720,28 @@
                     
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_container">container</a>($attributeOrAttributes, $value = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/FieldContainer.html#method_container"><abbr title="Lego\Field\Concerns\FieldContainer">FieldContainer</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_containerAttributes">containerAttributes</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/FieldContainer.html#method_containerAttributes"><abbr title="Lego\Field\Concerns\FieldContainer">FieldContainer</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_rules">rules</a>()
         
                                             <p class="no-description">No description</p>
@@ -882,6 +921,17 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_takeDefaultShowValue">takeDefaultShowValue</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/ValueOperator.html#method_takeDefaultShowValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Lego\Field\Concerns\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -1014,7 +1064,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $name, string $description = null, mixed $data = null)
+                    <a href="#method___construct">__construct</a>(string $name, string $description = null, mixed $data = [])
         
                                             <p>Field constructor.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Field.html#method___construct"><abbr title="Lego\Field\Field">Field</abbr></a></small></div>
@@ -1994,6 +2044,59 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_container">
+        <div class="location">in <a href="../../../Lego/Field/Concerns/FieldContainer.html#method_container"><abbr title="Lego\Field\Concerns\FieldContainer">FieldContainer</abbr></a> at         line 12</div>
+        <code>                    
+    <strong>container</strong>($attributeOrAttributes, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributeOrAttributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_containerAttributes">
+        <div class="location">in <a href="../../../Lego/Field/Concerns/FieldContainer.html#method_containerAttributes"><abbr title="Lego\Field\Concerns\FieldContainer">FieldContainer</abbr></a> at         line 20</div>
+        <code>                    
+    <strong>containerAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_rules">
         <div class="location">in <a href="../../../Lego/Field/Concerns/ValidationOperator.html#method_rules"><abbr title="Lego\Field\Concerns\ValidationOperator">ValidationOperator</abbr></a> at         line 18</div>
         <code>                    
@@ -2461,6 +2564,25 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_takeDefaultShowValue">
+        <div class="location">in <a href="../../../Lego/Field/Concerns/ValueOperator.html#method_takeDefaultShowValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a> at         line 90</div>
+        <code>                    
+    <strong>takeDefaultShowValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_scope">
         <div class="location">in <a href="../../../Lego/Field/Concerns/ScopeOperator.html#method_scope"><abbr title="Lego\Field\Concerns\ScopeOperator">ScopeOperator</abbr></a> at         line 44</div>
         <code>                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
@@ -2822,9 +2944,9 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../Lego/Field/Field.html#method___construct"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 72</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method___construct"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 73</div>
         <code>                    
-    <strong>__construct</strong>(string $name, string $description = null, mixed $data = null)
+    <strong>__construct</strong>(string $name, string $description = null, mixed $data = [])
         </code>
     </h3>
     <div class="details">
@@ -2863,7 +2985,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_name">
-        <div class="location">in <a href="../../../Lego/Field/Field.html#method_name"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 104</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_name"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 105</div>
         <code>                    
     <strong>name</strong>()
         </code>
@@ -2885,7 +3007,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_column">
-        <div class="location">in <a href="../../../Lego/Field/Field.html#method_column"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 109</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_column"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 110</div>
         <code>                    
     <strong>column</strong>()
         </code>
@@ -2904,7 +3026,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_description">
-        <div class="location">in <a href="../../../Lego/Field/Field.html#method_description"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 114</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_description"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 115</div>
         <code>                    
     <strong>description</strong>()
         </code>
@@ -2923,7 +3045,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_applyFilter">
-        <div class="location">in <a href="../../../Lego/Field/Field.html#method_applyFilter"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 119</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_applyFilter"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 120</div>
         <code>final                    
     <strong>applyFilter</strong>(<a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query)
         </code>
@@ -2973,7 +3095,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_syncValueToStore">
-        <div class="location">in <a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 137</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 138</div>
         <code>                    
     <strong>syncValueToStore</strong>()
         </code>
@@ -2994,7 +3116,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_view">
-        <div class="location">in <a href="../../../Lego/Field/Field.html#method_view"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 142</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_view"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 143</div>
         <code>            protected        
     <strong>view</strong>($view, $data = [])
         </code>

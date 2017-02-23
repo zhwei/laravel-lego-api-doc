@@ -105,6 +105,15 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                                            <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                                             <a href="../../../Lego/Foundation/Concerns/MessageOperator.html"><abbr title="Lego\Foundation\Concerns\MessageOperator">MessageOperator</abbr></a>
                                             
                 </div>
@@ -203,6 +212,14 @@
                 <td>$cells</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Concerns/HasCells.html#property_cells"><abbr title="Lego\Widget\Grid\Concerns\HasCells">HasCells</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_batches">
+                                        protected                                        
+                </td>
+                <td>$batches</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#property_batches"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_filter">
@@ -509,6 +526,39 @@
                     
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_addBatch">addBatch</a>($name, <a target="_blank" href="http://php.net/Closure">Closure</a> $action = null, $primaryKey = &#039;id&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_addBatch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_batches">batches</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batches"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_batch">batch</a>($name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_orderBy">orderBy</a>($attribute, bool $desc = false)
         
                                             <p class="no-description">No description</p>
@@ -687,7 +737,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at         line 138</div>
+        <div class="location">at         line 144</div>
         <code>                    string
     <strong>render</strong>()
         </code>
@@ -1018,7 +1068,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_transformer">
-        <div class="location">at         line 20</div>
+        <div class="location">at         line 21</div>
         <code>            protected        
     <strong>transformer</strong>($data)
         </code>
@@ -1198,7 +1248,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at         line 125</div>
+        <div class="location">at         line 126</div>
         <code>                    
     <strong>process</strong>()
         </code>
@@ -1309,8 +1359,95 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_addBatch">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_addBatch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 9</div>
+        <code>                    
+    <strong>addBatch</strong>($name, <a target="_blank" href="http://php.net/Closure">Closure</a> $action = null, $primaryKey = &#039;id&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$primaryKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_batches">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batches"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 16</div>
+        <code>                    
+    <strong>batches</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_batch">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 21</div>
+        <code>                    
+    <strong>batch</strong>($name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_orderBy">
-        <div class="location">at         line 31</div>
+        <div class="location">at         line 32</div>
         <code>                    
     <strong>orderBy</strong>($attribute, bool $desc = false)
         </code>
@@ -1344,7 +1481,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_exports">
-        <div class="location">at         line 42</div>
+        <div class="location">at         line 43</div>
         <code>                    
     <strong>exports</strong>()
         </code>
@@ -1363,7 +1500,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_export">
-        <div class="location">at         line 47</div>
+        <div class="location">at         line 48</div>
         <code>                    
     <strong>export</strong>($name, <a target="_blank" href="http://php.net/Closure">Closure</a> $onExport = null)
         </code>
@@ -1397,7 +1534,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_paginate">
-        <div class="location">at         line 100</div>
+        <div class="location">at         line 101</div>
         <code>                    
     <strong>paginate</strong>(int $perPage, $pageName = null)
         </code>
@@ -1431,7 +1568,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_paginator">
-        <div class="location">at         line 108</div>
+        <div class="location">at         line 109</div>
         <code>                    
     <strong>paginator</strong>()
         </code>
