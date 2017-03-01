@@ -183,7 +183,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_store">
-                                                                                <a href="../../Lego/Operator/Store/Store.html"><abbr title="Lego\Operator\Store\Store">Store</abbr></a>
+                                        protected                                        <a href="../../Lego/Operator/Store/Store.html"><abbr title="Lego\Operator\Store\Store">Store</abbr></a>
                 </td>
                 <td>$store</td>
                 <td class="last"></td>
@@ -247,16 +247,6 @@
         
                                             <p>初始化对象</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_initializeTraits">initializeTraits</a>()
-        
-                                            <p>初始化插件</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initializeTraits"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -370,11 +360,33 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_initializeOperator">initializeOperator</a>($data)
+                    <a href="#method_initializeDataOperator">initializeDataOperator</a>($data)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_initializeOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_initializeDataOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStore">getStore</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_getStore"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_getQuery"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -534,7 +546,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize">
-        <div class="location">in <a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 20</div>
+        <div class="location">in <a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 29</div>
         <code>            protected        
     <strong>initialize</strong>()
         </code>
@@ -545,27 +557,6 @@
 
                     <div class="method-description">
                                     <p>初始化对象</p>                                </div>
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_initializeTraits">
-        <div class="location">in <a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initializeTraits"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 29</div>
-        <code>            protected        
-    <strong>initializeTraits</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>初始化插件</p>                    <p>如果插件实现了 initializePluginName() 函数, 会在此处调用</p>            </div>
                 <div class="tags">
             
             
@@ -848,10 +839,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_initializeOperator">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_initializeOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 24</div>
+                    <h3 id="method_initializeDataOperator">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_initializeDataOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 24</div>
         <code>final            protected        
-    <strong>initializeOperator</strong>($data)
+    <strong>initializeDataOperator</strong>($data)
         </code>
     </h3>
     <div class="details">
@@ -869,6 +860,44 @@
             </tr>
             </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStore">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_getStore"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 41</div>
+        <code>                    
+    <strong>getStore</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_getQuery"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 46</div>
+        <code>                    
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
             
             
             

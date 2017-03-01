@@ -198,7 +198,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_store">
-                                                                                <a href="../../Lego/Operator/Store/Store.html"><abbr title="Lego\Operator\Store\Store">Store</abbr></a>
+                                        protected                                        <a href="../../Lego/Operator/Store/Store.html"><abbr title="Lego\Operator\Store\Store">Store</abbr></a>
                 </td>
                 <td>$store</td>
                 <td class="last"></td>
@@ -262,16 +262,6 @@
         
                                             <p>初始化对象</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_initializeTraits">initializeTraits</a>()
-        
-                                            <p>初始化插件</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initializeTraits"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -385,11 +375,33 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_initializeOperator">initializeOperator</a>($data)
+                    <a href="#method_initializeDataOperator">initializeDataOperator</a>($data)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_initializeOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_initializeDataOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStore">getStore</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_getStore"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#method_getQuery"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -473,6 +485,17 @@
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_initializeHasFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFieldElementNamePrefix">getFieldElementNamePrefix</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -644,7 +667,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize">
-        <div class="location">in <a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 20</div>
+        <div class="location">in <a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 29</div>
         <code>            protected        
     <strong>initialize</strong>()
         </code>
@@ -655,27 +678,6 @@
 
                     <div class="method-description">
                                     <p>初始化对象</p>                                </div>
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_initializeTraits">
-        <div class="location">in <a href="../../Lego/Foundation/Concerns/InitializeOperator.html#method_initializeTraits"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 29</div>
-        <code>            protected        
-    <strong>initializeTraits</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>初始化插件</p>                    <p>如果插件实现了 initializePluginName() 函数, 会在此处调用</p>            </div>
                 <div class="tags">
             
             
@@ -958,10 +960,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_initializeOperator">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_initializeOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 24</div>
+                    <h3 id="method_initializeDataOperator">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_initializeDataOperator"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 24</div>
         <code>final            protected        
-    <strong>initializeOperator</strong>($data)
+    <strong>initializeDataOperator</strong>($data)
         </code>
     </h3>
     <div class="details">
@@ -979,6 +981,44 @@
             </tr>
             </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStore">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_getStore"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 41</div>
+        <code>                    
+    <strong>getStore</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/Operable.html#method_getQuery"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a> at         line 46</div>
+        <code>                    
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
             
             
             
@@ -1197,7 +1237,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at         line 23</div>
+        <div class="location">at         line 28</div>
         <code>                    
     <strong>process</strong>()
         </code>
@@ -1236,8 +1276,27 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getFieldElementNamePrefix">
+        <div class="location">at         line 20</div>
+        <code>            protected        
+    <strong>getFieldElementNamePrefix</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_fields">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_fields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 38</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_fields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 45</div>
         <code>                    <abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]
     <strong>fields</strong>()
         </code>
@@ -1267,7 +1326,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_editableFields">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_editableFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 48</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_editableFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 55</div>
         <code>                    <abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]
     <strong>editableFields</strong>()
         </code>
@@ -1297,7 +1356,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_field">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_field"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 60</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_field"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 67</div>
         <code>                    <a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|null
     <strong>field</strong>($fieldName)
         </code>
@@ -1337,7 +1396,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addField">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addField"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 65</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addField"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 72</div>
         <code>                    
     <strong>addField</strong>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field)
         </code>
@@ -1366,7 +1425,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_processFields">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_processFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 72</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_processFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 79</div>
         <code>            protected        
     <strong>processFields</strong>()
         </code>
@@ -1385,7 +1444,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_required">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_required"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 85</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_required"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 92</div>
         <code>                    <abbr title="Lego\Widget\Concerns\$this">$this</abbr>
     <strong>required</strong>(array[]|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[] $fields = [])
         </code>
@@ -1459,7 +1518,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_grid">
-        <div class="location">at         line 43</div>
+        <div class="location">at         line 48</div>
         <code>                    
     <strong>grid</strong>($syncFields = false)
         </code>

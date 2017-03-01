@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Widget\Concerns\Operable | Laravel Lego API</title>
+    <title>Lego\Widget\Confirm | Laravel Lego API</title>
 
-            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <script src="../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../js/bootstrap.min.js"></script>
-        <script src="../../../js/typeahead.min.js"></script>
-        <script src="../../../sami.js"></script>
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -19,14 +19,14 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Widget_Concerns_Operable" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Widget_Confirm" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
                 <script>
             $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
         </script>
-        <form id="search-form" action="../../../search.html" method="GET">
+        <form id="search-form" action="../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -48,16 +48,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../../../index.html">Laravel Lego API</a>
+                <a class="navbar-brand" href="../../index.html">Laravel Lego API</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
-                    <li><a href="../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
-                    <li><a href="../../../traits.html">Traits</a></li>
-                    <li><a href="../../../doc-index.html">Index</a></li>
-                    <li><a href="../../../search.html">Search</a></li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
                 </ul>
             </div>
         </div>
@@ -65,32 +65,31 @@
 
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
-                <li><span class="label label-default">trait</span></li>
-                                                            <li><a href="../../../Lego.html">Lego</a></li>
-                                        <li><a href="../../../Lego/Widget.html">Widget</a></li>
-                                        <li><a href="../../../Lego/Widget/Concerns.html">Concerns</a></li>
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Lego.html">Lego</a></li>
+                                        <li><a href="../../Lego/Widget.html">Widget</a></li>
     
-                <li>Operable</li>
+                <li>Confirm</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            Operable
+            Confirm
                 
         </h1>
     </div>
 
-    <p>    trait
-    <strong>Operable</strong>
+    <p>    class
+    <strong>Confirm</strong>
 </p>
 
         
     
 
             <div class="description">
-            <p>Operator 的承载类，用于拆分代码</p>                    </div>
+            <p>Confirm 操作</p>                    </div>
     
     
     
@@ -98,27 +97,27 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_data">
-                                        protected                                        
+                <td class="type" id="property_message">
+                                        protected                                        string
                 </td>
-                <td>$data</td>
+                <td>$message</td>
+                <td class="last">提示信息</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_action">
+                                        protected                                        callable
+                </td>
+                <td>$action</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_query">
-                                        protected                                        <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a>
+                <td class="type" id="property_delay">
+                                        protected                                        int
                 </td>
-                <td>$query</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_store">
-                                        protected                                        <a href="../../../Lego/Operator/Store/Store.html"><abbr title="Lego\Operator\Store\Store">Store</abbr></a>
-                </td>
-                <td>$store</td>
-                <td class="last"></td>
+                <td>$delay</td>
+                <td class="last">等待 $delay 秒才可确认</td>
                 <td></td>
             </tr>
             </table>
@@ -132,7 +131,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_initializeDataOperator">initializeDataOperator</a>($data)
+                    <a href="#method___construct">__construct</a>($message, callable $action, int $delay = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -143,18 +142,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getStore">getStore</a>()
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getQuery">getQuery</a>()
+                    <a href="#method_response">response</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -167,10 +155,10 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_initializeDataOperator">
-        <div class="location">at         line 24</div>
-        <code>final            protected        
-    <strong>initializeDataOperator</strong>($data)
+                    <h3 id="method___construct">
+        <div class="location">at         line 28</div>
+        <code>                    
+    <strong>__construct</strong>($message, callable $action, int $delay = null)
         </code>
     </h3>
     <div class="details">
@@ -183,7 +171,17 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$data</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$delay</td>
                 <td></td>
             </tr>
             </table>
@@ -196,29 +194,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getStore">
-        <div class="location">at         line 41</div>
+                    <h3 id="method_response">
+        <div class="location">at         line 38</div>
         <code>                    
-    <strong>getStore</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getQuery">
-        <div class="location">at         line 46</div>
-        <code>                    
-    <strong>getQuery</strong>()
+    <strong>response</strong>()
         </code>
     </h3>
     <div class="details">
