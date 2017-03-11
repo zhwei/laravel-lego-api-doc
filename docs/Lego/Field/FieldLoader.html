@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Widget\Confirm | Laravel Lego API</title>
+    <title>Lego\Field\FieldLoader | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Widget_Confirm" data-root-path="../../">
+    <body id="class" data-name="class:Lego_Field_FieldLoader" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -67,80 +67,32 @@
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
                                                             <li><a href="../../Lego.html">Lego</a></li>
-                                        <li><a href="../../Lego/Widget.html">Widget</a></li>
+                                        <li><a href="../../Lego/Field.html">Field</a></li>
     
-                <li>Confirm</li>
+                <li>FieldLoader</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            Confirm
+            FieldLoader
                 
         </h1>
     </div>
 
     <p>    class
-    <strong>Confirm</strong>
+    <strong>FieldLoader</strong>
 </p>
 
         
     
 
             <div class="description">
-            <p>Confirm 操作</p>                    </div>
+            <p>call through app('lego-fields')</p>                    </div>
     
     
-            <h2>Constants</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td>CONFIRM_QUERY_NAME</td>
-                <td class="last">
-                    <p><em></em></p>
-                    <p></p>
-                </td>
-            </tr>
-                    <tr>
-                <td>FROM_QUERY_NAME</td>
-                <td class="last">
-                    <p><em></em></p>
-                    <p></p>
-                </td>
-            </tr>
-            </table>
-
     
-            <h2>Properties</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td class="type" id="property_message">
-                                        protected                                        string
-                </td>
-                <td>$message</td>
-                <td class="last">提示信息</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_action">
-                                        protected                                        callable
-                </td>
-                <td>$action</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_delay">
-                                        protected                                        int
-                </td>
-                <td>$delay</td>
-                <td class="last">等待 $delay 秒才可确认</td>
-                <td></td>
-            </tr>
-            </table>
-
     
             <h2>Methods</h2>
 
@@ -150,7 +102,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>($message, callable $action, int $delay = null)
+                    <a href="#method___construct">__construct</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -161,7 +113,18 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_response">response</a>()
+                    <a href="#method_get">get</a>($name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_all">all</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -175,9 +138,28 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 34</div>
+        <div class="location">at         line 13</div>
         <code>                    
-    <strong>__construct</strong>($message, callable $action, int $delay = null)
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         line 31</div>
+        <code>                    
+    <strong>get</strong>($name)
         </code>
     </h3>
     <div class="details">
@@ -190,17 +172,7 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$message</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>callable</td>
-                <td>$action</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>int</td>
-                <td>$delay</td>
+                <td>$name</td>
                 <td></td>
             </tr>
             </table>
@@ -213,10 +185,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_response">
-        <div class="location">at         line 48</div>
+                    <h3 id="method_all">
+        <div class="location">at         line 36</div>
         <code>                    
-    <strong>response</strong>()
+    <strong>all</strong>()
         </code>
     </h3>
     <div class="details">
