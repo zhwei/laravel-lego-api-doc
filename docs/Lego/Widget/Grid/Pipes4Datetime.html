@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Field\Concerns\HasRelation | Laravel Lego API</title>
+    <title>Lego\Widget\Grid\Pipes4Datetime | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Field_Concerns_HasRelation" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Widget_Grid_Pipes4Datetime" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -65,64 +65,33 @@
 
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
-                <li><span class="label label-default">trait</span></li>
+                <li><span class="label label-default">class</span></li>
                                                             <li><a href="../../../Lego.html">Lego</a></li>
-                                        <li><a href="../../../Lego/Field.html">Field</a></li>
-                                        <li><a href="../../../Lego/Field/Concerns.html">Concerns</a></li>
+                                        <li><a href="../../../Lego/Widget.html">Widget</a></li>
+                                        <li><a href="../../../Lego/Widget/Grid.html">Grid</a></li>
     
-                <li>HasRelation</li>
+                <li>Pipes4Datetime</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            HasRelation
+            Pipes4Datetime
                 
         </h1>
     </div>
 
-    <p>    trait
-    <strong>HasRelation</strong>
+    <p>    class
+    <strong>Pipes4Datetime</strong>        extends <a href="../../../Lego/Widget/Grid/Pipes.html"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a>
 </p>
 
         
     
 
-            <div class="description">
-            <p>Field 中 Relation 的处理逻辑</p>            <p>Relation example: school.city.name</p>        </div>
     
     
     
-            <h2>Properties</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td class="type" id="property_foreignKey">
-                                        protected                                        string
-                </td>
-                <td>$foreignKey</td>
-                <td class="last">eg: city_id</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_relation">
-                                        protected                                        string
-                </td>
-                <td>$relation</td>
-                <td class="last">eg: school.city</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_relationColumn">
-                                        protected                                        string
-                </td>
-                <td>$relationColumn</td>
-                <td class="last">eg: name</td>
-                <td></td>
-            </tr>
-            </table>
-
     
             <h2>Methods</h2>
 
@@ -132,7 +101,51 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_initializeHasRelation">initializeHasRelation</a>()
+                    <a href="#method___construct">__construct</a>($value, $data, <a href="../../../Lego/Widget/Grid/Cell.html"><abbr title="Lego\Widget\Grid\Cell">Cell</abbr></a> $cell)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Pipes.html#method___construct"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_value">value</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Pipes.html#method_value"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_data">data</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Pipes.html#method_data"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cell">cell</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Pipes.html#method_cell"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handleDate">handleDate</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -143,7 +156,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_relation">relation</a>()
+                    <a href="#method_handleDatetime">handleDatetime</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -154,7 +167,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_foreignKey">foreignKey</a>()
+                    <a href="#method_handleTime">handleTime</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -165,20 +178,10 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getColumnPathOfRelation">getColumnPathOfRelation</a>($column)
+                    <a href="#method_handleDateFormat">handleDateFormat</a>($format)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_filterWithRelation">filterWithRelation</a>(<a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query, <a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
-        
-                                            <p>嵌套查询的辅助函数</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -188,10 +191,49 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_initializeHasRelation">
-        <div class="location">at         line 35</div>
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Pipes.html#method___construct"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a> at         line 12</div>
+        <code>                    
+    <strong>__construct</strong>($value, $data, <a href="../../../Lego/Widget/Grid/Cell.html"><abbr title="Lego\Widget\Grid\Cell">Cell</abbr></a> $cell)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Lego/Widget/Grid/Cell.html"><abbr title="Lego\Widget\Grid\Cell">Cell</abbr></a></td>
+                <td>$cell</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_value">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Pipes.html#method_value"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a> at         line 19</div>
         <code>            protected        
-    <strong>initializeHasRelation</strong>()
+    <strong>value</strong>()
         </code>
     </h3>
     <div class="details">
@@ -207,10 +249,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_relation">
-        <div class="location">at         line 47</div>
-        <code>                    
-    <strong>relation</strong>()
+                    <h3 id="method_data">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Pipes.html#method_data"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a> at         line 24</div>
+        <code>            protected        
+    <strong>data</strong>()
         </code>
     </h3>
     <div class="details">
@@ -226,10 +268,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_foreignKey">
-        <div class="location">at         line 52</div>
-        <code>                    
-    <strong>foreignKey</strong>()
+                    <h3 id="method_cell">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Pipes.html#method_cell"><abbr title="Lego\Widget\Grid\Pipes">Pipes</abbr></a> at         line 29</div>
+        <code>            protected        
+    <strong>cell</strong>()
         </code>
     </h3>
     <div class="details">
@@ -245,10 +287,67 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getColumnPathOfRelation">
-        <div class="location">at         line 57</div>
+                    <h3 id="method_handleDate">
+        <div class="location">at         line 5</div>
         <code>                    
-    <strong>getColumnPathOfRelation</strong>($column)
+    <strong>handleDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleDatetime">
+        <div class="location">at         line 10</div>
+        <code>                    
+    <strong>handleDatetime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleTime">
+        <div class="location">at         line 15</div>
+        <code>                    
+    <strong>handleTime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleDateFormat">
+        <div class="location">at         line 20</div>
+        <code>                    
+    <strong>handleDateFormat</strong>($format)
         </code>
     </h3>
     <div class="details">
@@ -261,57 +360,12 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$column</td>
+                <td>$format</td>
                 <td></td>
             </tr>
             </table>
 
             
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_filterWithRelation">
-        <div class="location">at         line 69</div>
-        <code>            protected        <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a>
-    <strong>filterWithRelation</strong>(<a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query, <a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>嵌套查询的辅助函数</p>                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a></td>
-                <td>$query</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
-                <td>$closure</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
             
             
                     </div>

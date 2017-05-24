@@ -126,6 +126,17 @@
                     
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_pipeStrip">pipeStrip</a>($value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeStrip"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_pipeDate">pipeDate</a>($time)
         
                                             <p class="no-description">No description</p>
@@ -254,13 +265,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getOriginalValue">getOriginalValue</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>cell original value before pipes is called</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -268,10 +278,30 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_value">value</a>()
+                    <a href="#method_getDefaultValue">getDefaultValue</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\HtmlString">HtmlString</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_value">value</a>()
+        
+                                            <p>cell value after pipes processed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPlainValue">getPlainValue</a>()
+        
+                                            <p>cell plain value after pipes processed</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -321,8 +351,37 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_pipeStrip">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeStrip"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a> at         line 10</div>
+        <code>            protected        
+    <strong>pipeStrip</strong>($value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_pipeDate">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeDate"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a> at         line 10</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeDate"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a> at         line 15</div>
         <code>            protected        
     <strong>pipeDate</strong>($time)
         </code>
@@ -351,7 +410,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pipeDatetime">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeDatetime"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a> at         line 15</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeDatetime"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a> at         line 20</div>
         <code>            protected        
     <strong>pipeDatetime</strong>($time)
         </code>
@@ -380,7 +439,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pipeTime">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeTime"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a> at         line 20</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/CommonPipes.html#method_pipeTime"><abbr title="Lego\Widget\Grid\Concerns\CommonPipes">CommonPipes</abbr></a> at         line 25</div>
         <code>            protected        
     <strong>pipeTime</strong>($time)
         </code>
@@ -409,7 +468,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 26</div>
+        <div class="location">at         line 27</div>
         <code>                    
     <strong>__construct</strong>($name, $description)
         </code>
@@ -443,7 +502,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_name">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 38</div>
         <code>                    
     <strong>name</strong>()
         </code>
@@ -462,7 +521,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_description">
-        <div class="location">at         line 42</div>
+        <div class="location">at         line 43</div>
         <code>                    
     <strong>description</strong>()
         </code>
@@ -481,7 +540,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_default">
-        <div class="location">at         line 47</div>
+        <div class="location">at         line 48</div>
         <code>                    
     <strong>default</strong>($value)
         </code>
@@ -510,7 +569,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pipe">
-        <div class="location">at         line 64</div>
+        <div class="location">at         line 65</div>
         <code>                    <abbr title="Lego\Widget\Grid\$this">$this</abbr>
     <strong>pipe</strong>(callable|string $pipe)
         </code>
@@ -561,7 +620,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_cell">
-        <div class="location">at         line 89</div>
+        <div class="location">at         line 72</div>
         <code>                    
     <strong>cell</strong>($callable)
         </code>
@@ -590,7 +649,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_copy">
-        <div class="location">at         line 94</div>
+        <div class="location">at         line 77</div>
         <code>                    
     <strong>copy</strong>()
         </code>
@@ -609,7 +668,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fill">
-        <div class="location">at         line 99</div>
+        <div class="location">at         line 82</div>
         <code>                    
     <strong>fill</strong>($data)
         </code>
@@ -638,7 +697,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_store">
-        <div class="location">at         line 112</div>
+        <div class="location">at         line 95</div>
         <code>                    
     <strong>store</strong>()
         </code>
@@ -657,9 +716,39 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getOriginalValue">
-        <div class="location">at         line 117</div>
-        <code>                    
+        <div class="location">at         line 105</div>
+        <code>                    string
     <strong>getOriginalValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>cell original value before pipes is called</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultValue">
+        <div class="location">at         line 110</div>
+        <code>                    
+    <strong>getDefaultValue</strong>()
         </code>
     </h3>
     <div class="details">
@@ -676,8 +765,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_value">
-        <div class="location">at         line 122</div>
-        <code>                    
+        <div class="location">at         line 120</div>
+        <code>                    <abbr title="Illuminate\Support\HtmlString">HtmlString</abbr>
     <strong>value</strong>()
         </code>
     </h3>
@@ -685,8 +774,49 @@
             
     
 
+                    <div class="method-description">
+                                    <p>cell value after pipes processed</p>                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\HtmlString">HtmlString</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlainValue">
+        <div class="location">at         line 134</div>
+        <code>                    string
+    <strong>getPlainValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>cell plain value after pipes processed</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -695,7 +825,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         line 131</div>
+        <div class="location">at         line 139</div>
         <code>                    
     <strong>__toString</strong>()
         </code>

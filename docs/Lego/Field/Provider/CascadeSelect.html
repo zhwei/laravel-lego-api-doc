@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Field\Provider\AutoComplete | Laravel Lego API</title>
+    <title>Lego\Field\Provider\CascadeSelect | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Field_Provider_AutoComplete" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Field_Provider_CascadeSelect" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -70,20 +70,20 @@
                                         <li><a href="../../../Lego/Field.html">Field</a></li>
                                         <li><a href="../../../Lego/Field/Provider.html">Provider</a></li>
     
-                <li>AutoComplete</li>
+                <li>CascadeSelect</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            AutoComplete
+            CascadeSelect
                 
         </h1>
     </div>
 
     <p>    class
-    <strong>AutoComplete</strong>        extends <a href="../../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>
+    <strong>CascadeSelect</strong>        extends <a href="../../../Lego/Field/Provider/Select.html"><abbr title="Lego\Field\Provider\Select">Select</abbr></a>
 </p>
 
         
@@ -94,6 +94,24 @@
 
         
     <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Lego/Field/Concerns/FilterWhereEquals.html"><abbr title="Lego\Field\Concerns\FilterWhereEquals">FilterWhereEquals</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Lego/Field/Concerns/FilterWhereContains.html"><abbr title="Lego\Field\Concerns\FilterWhereContains">FilterWhereContains</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
                     <div class="row">
                 <div class="col-md-6">
                                             <a href="../../../Lego/Foundation/Concerns/MessageOperator.html"><abbr title="Lego\Foundation\Concerns\MessageOperator">MessageOperator</abbr></a>
@@ -213,6 +231,18 @@
             </div>
             </div>
     
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DEPEND_QUERY_KEY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
     
             <h2>Properties</h2>
 
@@ -330,10 +360,26 @@
                 <td><small>from&nbsp;<a href="../../../Lego/Field/Field.html#property_column"><abbr title="Lego\Field\Field">Field</abbr></a></small></td>
             </tr>
                     <tr>
-                <td class="type" id="property_matchIsModified">
+                <td class="type" id="property_validateOption">
                                         protected                                        
                 </td>
-                <td>$matchIsModified</td>
+                <td>$validateOption</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_options">
+                                        protected                                        
+                </td>
+                <td>$options</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Lego/Field/Provider/Select.html#property_options"><abbr title="Lego\Field\Provider\Select">Select</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_depend">
+                                        protected                                        <a href="../../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>
+                </td>
+                <td>$depend</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -394,7 +440,7 @@
                     <a href="#method_initialize">initialize</a>()
         
                                             <p>初始化对象</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -404,7 +450,7 @@
                     <a href="#method_render">render</a>()
         
                                             <p>渲染当前对象</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/RenderStringOperator.html#method_render"><abbr title="Lego\Foundation\Concerns\RenderStringOperator">RenderStringOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -879,7 +925,7 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/ValueOperator.html#method_setOriginalValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -912,7 +958,7 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/ValueOperator.html#method_getDisplayValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1106,7 +1152,7 @@
                     <a href="#method_filter">filter</a>(<a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query)
         
                                             <p>Filter 检索数据时, 构造此字段的查询</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/FilterWhereEquals.html#method_filter"><abbr title="Lego\Field\Concerns\FilterWhereEquals">FilterWhereEquals</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1170,7 +1216,7 @@
                     <a href="#method_process">process</a>()
         
                                             <p>数据处理逻辑</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Text.html#method_process"><abbr title="Lego\Field\Provider\Text">Text</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1180,7 +1226,7 @@
                     <a href="#method_syncValueToStore">syncValueToStore</a>()
         
                                             <p>将新的数据存储到 Store</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1198,64 +1244,64 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_limit">limit</a>(int $limit)
+                    <a href="#method_disableValidateOption">disableValidateOption</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Select.html#method_disableValidateOption"><abbr title="Lego\Field\Provider\Select">Select</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getLimit">getLimit</a>()
+                    <a href="#method_deepInArray">deepInArray</a>($value, array $array)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_min">min</a>(int $length)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getMin">getMin</a>()
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_remote">remote</a>()
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Select.html#method_deepInArray"><abbr title="Lego\Field\Provider\Select">Select</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     <abbr title="Lego\Field\Provider\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_match">match</a>(callable $callable)
+                    <a href="#method_options">options</a>(array $options)
         
-                                            <p>自动补全的结果集</p>                </div>
+                                            <p>options(['active' => 'Active', 'disabled' => 'Disabled'])</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Select.html#method_options"><abbr title="Lego\Field\Provider\Select">Select</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Field\Provider\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_values">values</a>(array|mixed $values)
+        
+                                            <p>values([1, 2, 3]) === options([1 => 1, 2 => 2, 3 => 3])
+values(1, 2, 3) === options([1 => 1, 2 => 2, 3 => 3])</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Select.html#method_values"><abbr title="Lego\Field\Provider\Select">Select</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Select.html#method_getOptions"><abbr title="Lego\Field\Provider\Select">Select</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_depend">depend</a>(<a href="../../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field, <a target="_blank" href="http://php.net/Closure">Closure</a> $match)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1263,9 +1309,10 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_valueColumn">valueColumn</a>($column)
+                    <a href="#method_getDependField">getDependField</a>()
         
-                                            <p>自动补全结果集的 key 即 存储到数据库的值</p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1273,7 +1320,18 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getValueColumn">getValueColumn</a>()
+                    <a href="#method_getRemote">getRemote</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFEOptions">getFEOptions</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -1365,7 +1423,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize">
-        <div class="location">at         line 11</div>
+        <div class="location">in <a href="../../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 29</div>
         <code>            protected        
     <strong>initialize</strong>()
         </code>
@@ -1386,8 +1444,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at         line 149</div>
-        <code>                    string
+        <div class="location">in <a href="../../../Lego/Foundation/Concerns/RenderStringOperator.html#method_render"><abbr title="Lego\Foundation\Concerns\RenderStringOperator">RenderStringOperator</abbr></a> at         line 17</div>
+        <code>    abstract                string
     <strong>render</strong>()
         </code>
     </h3>
@@ -1729,7 +1787,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderEditable">
-        <div class="location">at         line 154</div>
+        <div class="location">at         line 69</div>
         <code>            protected        
     <strong>renderEditable</strong>()
         </code>
@@ -2562,7 +2620,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setOriginalValue">
-        <div class="location">at         line 113</div>
+        <div class="location">in <a href="../../../Lego/Field/Concerns/ValueOperator.html#method_setOriginalValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a> at         line 30</div>
         <code>                    
     <strong>setOriginalValue</strong>($originalValue)
         </code>
@@ -2639,7 +2697,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDisplayValue">
-        <div class="location">at         line 118</div>
+        <div class="location">in <a href="../../../Lego/Field/Concerns/ValueOperator.html#method_getDisplayValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a> at         line 49</div>
         <code>                    
     <strong>getDisplayValue</strong>()
         </code>
@@ -3114,7 +3172,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_filter">
-        <div class="location">at         line 164</div>
+        <div class="location">in <a href="../../../Lego/Field/Concerns/FilterWhereEquals.html#method_filter"><abbr title="Lego\Field\Concerns\FilterWhereEquals">FilterWhereEquals</abbr></a> at         line 12</div>
         <code>                    <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a>
     <strong>filter</strong>(<a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query)
         </code>
@@ -3284,7 +3342,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at         line 131</div>
+        <div class="location">in <a href="../../../Lego/Field/Provider/Text.html#method_process"><abbr title="Lego\Field\Provider\Text">Text</abbr></a> at         line 29</div>
         <code>                    
     <strong>process</strong>()
         </code>
@@ -3305,7 +3363,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_syncValueToStore">
-        <div class="location">at         line 176</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 114</div>
         <code>                    
     <strong>syncValueToStore</strong>()
         </code>
@@ -3359,10 +3417,29 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_limit">
-        <div class="location">at         line 42</div>
+                    <h3 id="method_disableValidateOption">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Select.html#method_disableValidateOption"><abbr title="Lego\Field\Provider\Select">Select</abbr></a> at         line 22</div>
         <code>                    
-    <strong>limit</strong>(int $limit)
+    <strong>disableValidateOption</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deepInArray">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Select.html#method_deepInArray"><abbr title="Lego\Field\Provider\Select">Select</abbr></a> at         line 28</div>
+        <code>            protected        
+    <strong>deepInArray</strong>($value, array $array)
         </code>
     </h3>
     <div class="details">
@@ -3374,8 +3451,13 @@ $field->scope(function (Query $filter, $value) {
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
-                <td>$limit</td>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
                 <td></td>
             </tr>
             </table>
@@ -3388,96 +3470,10 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getLimit">
-        <div class="location">at         line 49</div>
-        <code>                    
-    <strong>getLimit</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_min">
-        <div class="location">at         line 59</div>
-        <code>                    
-    <strong>min</strong>(int $length)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>int</td>
-                <td>$length</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getMin">
-        <div class="location">at         line 66</div>
-        <code>                    
-    <strong>getMin</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_remote">
-        <div class="location">at         line 77</div>
-        <code>                    
-    <strong>remote</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_match">
-        <div class="location">at         line 89</div>
+                    <h3 id="method_options">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Select.html#method_options"><abbr title="Lego\Field\Provider\Select">Select</abbr></a> at         line 77</div>
         <code>                    <abbr title="Lego\Field\Provider\$this">$this</abbr>
-    <strong>match</strong>(callable $callable)
+    <strong>options</strong>(array $options)
         </code>
     </h3>
     <div class="details">
@@ -3485,14 +3481,14 @@ $field->scope(function (Query $filter, $value) {
     
 
                     <div class="method-description">
-                                    <p>自动补全的结果集</p>                                </div>
+                                    <p>options(['active' => 'Active', 'disabled' => 'Disabled'])</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>callable</td>
-                <td>$callable</td>
+                <td>array</td>
+                <td>$options</td>
                 <td></td>
             </tr>
             </table>
@@ -3514,10 +3510,10 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_valueColumn">
-        <div class="location">at         line 106</div>
-        <code>                    
-    <strong>valueColumn</strong>($column)
+                    <h3 id="method_values">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Select.html#method_values"><abbr title="Lego\Field\Provider\Select">Select</abbr></a> at         line 91</div>
+        <code>                    <abbr title="Lego\Field\Provider\$this">$this</abbr>
+    <strong>values</strong>(array|mixed $values)
         </code>
     </h3>
     <div class="details">
@@ -3525,14 +3521,77 @@ $field->scope(function (Query $filter, $value) {
     
 
                     <div class="method-description">
-                                    <p>自动补全结果集的 key 即 存储到数据库的值</p>                                </div>
+                                    <p>values([1, 2, 3]) === options([1 => 1, 2 => 2, 3 => 3])
+values(1, 2, 3) === options([1 => 1, 2 => 2, 3 => 3])</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
+                <td>array|mixed</td>
+                <td>$values</td>
                 <td></td>
-                <td>$column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Field\Provider\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Select.html#method_getOptions"><abbr title="Lego\Field\Provider\Select">Select</abbr></a> at         line 99</div>
+        <code>                    
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_depend">
+        <div class="location">at         line 21</div>
+        <code>                    
+    <strong>depend</strong>(<a href="../../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field, <a target="_blank" href="http://php.net/Closure">Closure</a> $match)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$match</td>
                 <td></td>
             </tr>
             </table>
@@ -3545,10 +3604,48 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getValueColumn">
-        <div class="location">at         line 126</div>
-        <code>            protected        
-    <strong>getValueColumn</strong>()
+                    <h3 id="method_getDependField">
+        <div class="location">at         line 44</div>
+        <code>                    
+    <strong>getDependField</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRemote">
+        <div class="location">at         line 49</div>
+        <code>                    
+    <strong>getRemote</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFEOptions">
+        <div class="location">at         line 54</div>
+        <code>                    
+    <strong>getFEOptions</strong>()
         </code>
     </h3>
     <div class="details">
