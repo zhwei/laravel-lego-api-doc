@@ -189,6 +189,14 @@
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#property_store"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_uniqueId">
+                                        protected                                        string
+                </td>
+                <td>$uniqueId</td>
+                <td class="last">控件 unique id ，注意：此 id 无法跨请求使用，每次请求都会重新生成</td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -407,6 +415,17 @@
                     <a href="#method_transformer">transformer</a>($data)
         
                                             <p>初始化 Operator 之前，对 $data 进行修正的工具函数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_uniqueId">uniqueId</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -684,7 +703,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_buttonLocations">
-        <div class="location">at         line 52</div>
+        <div class="location">at         line 65</div>
         <code>                    array
     <strong>buttonLocations</strong>()
         </code>
@@ -733,7 +752,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getButtons">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_getButtons"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 29</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_getButtons"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 31</div>
         <code>                    
     <strong>getButtons</strong>($location)
         </code>
@@ -762,7 +781,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addButton">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_addButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 35</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_addButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 37</div>
         <code>                    
     <strong>addButton</strong>($location, $text, $url = null, $id = null)
         </code>
@@ -806,7 +825,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeButton">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_removeButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 43</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_removeButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 45</div>
         <code>                    
     <strong>removeButton</strong>($location, $text)
         </code>
@@ -907,7 +926,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 24</div>
+        <div class="location">at         line 30</div>
         <code>                    
     <strong>__construct</strong>($data)
         </code>
@@ -936,7 +955,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_transformer">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 45</div>
         <code>            protected        
     <strong>transformer</strong>($data)
         </code>
@@ -966,8 +985,27 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_uniqueId">
+        <div class="location">at         line 50</div>
+        <code>                    
+    <strong>uniqueId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_data">
-        <div class="location">at         line 42</div>
+        <div class="location">at         line 55</div>
         <code>                    
     <strong>data</strong>()
         </code>
@@ -986,7 +1024,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_view">
-        <div class="location">at         line 70</div>
+        <div class="location">at         line 83</div>
         <code>                    mixed
     <strong>view</strong>($view, array $data = [], array $mergeData = [])
         </code>
@@ -1036,7 +1074,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewriteResponse">
-        <div class="location">at         line 86</div>
+        <div class="location">at         line 99</div>
         <code>            protected        <abbr title="Lego\Widget\$this">$this</abbr>
     <strong>rewriteResponse</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $response)
         </code>
@@ -1076,7 +1114,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_response">
-        <div class="location">at         line 99</div>
+        <div class="location">at         line 112</div>
         <code>final                    mixed
     <strong>response</strong>(mixed $response)
         </code>
@@ -1116,7 +1154,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at         line 124</div>
+        <div class="location">at         line 137</div>
         <code>    abstract                
     <strong>process</strong>()
         </code>

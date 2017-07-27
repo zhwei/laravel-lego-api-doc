@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Field\Provider\JSON | Laravel Lego API</title>
+    <title>Lego\Field\Provider\Checkboxes | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Field_Provider_JSON" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Field_Provider_Checkboxes" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -70,20 +70,20 @@
                                         <li><a href="../../../Lego/Field.html">Field</a></li>
                                         <li><a href="../../../Lego/Field/Provider.html">Provider</a></li>
     
-                <li>JSON</li>
+                <li>Checkboxes</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            JSON
+            Checkboxes
                 
         </h1>
     </div>
 
     <p>    class
-    <strong>JSON</strong>        extends <a href="../../../Lego/Field/Provider/Text.html"><abbr title="Lego\Field\Provider\Text">Text</abbr></a>
+    <strong>Checkboxes</strong>        extends <a href="../../../Lego/Field/Provider/Radios.html"><abbr title="Lego\Field\Provider\Radios">Radios</abbr></a>
 </p>
 
         
@@ -96,7 +96,25 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                                            <a href="../../../Lego/Field/Concerns/DisabledInFilter.html"><abbr title="Lego\Field\Concerns\DisabledInFilter">DisabledInFilter</abbr></a>
+                                            <a href="../../../Lego/Field/Concerns/FilterWhereContains.html"><abbr title="Lego\Field\Concerns\FilterWhereContains">FilterWhereContains</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Lego/Field/Concerns/FilterWhereEquals.html"><abbr title="Lego\Field\Concerns\FilterWhereEquals">FilterWhereEquals</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Lego/Field/Concerns/HasOptions.html"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a>
                                             
                 </div>
                 <div class="col-md-6">
@@ -270,11 +288,11 @@
             </tr>
                     <tr>
                 <td class="type" id="property_inputType">
-                                        protected                                        string
+                                        protected                                        
                 </td>
                 <td>$inputType</td>
-                <td class="last">&lt;input type="<strong>THIS_VALUE</strong>" .</td>
-                <td><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HtmlOperator.html#property_inputType"><abbr title="Lego\Field\Concerns\HtmlOperator">HtmlOperator</abbr></a></small></td>
+                <td class="last"></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_fieldContainerAttributes">
@@ -357,11 +375,19 @@
                 <td><small>from&nbsp;<a href="../../../Lego/Field/Field.html#property_column"><abbr title="Lego\Field\Field">Field</abbr></a></small></td>
             </tr>
                     <tr>
-                <td class="type" id="property_jsonKey">
+                <td class="type" id="property_options">
                                         protected                                        
                 </td>
-                <td>$jsonKey</td>
+                <td>$options</td>
                 <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HasOptions.html#property_options"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_separator">
+                                        protected                                        string
+                </td>
+                <td>$separator</td>
+                <td class="last">存储到数据库时的分隔符</td>
                 <td></td>
             </tr>
             </table>
@@ -595,7 +621,7 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderReadonly"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -916,7 +942,7 @@
                     <a href="#method_getOriginalValue">getOriginalValue</a>()
         
                                             <p>数据库原始值</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/ValueOperator.html#method_getOriginalValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1014,7 +1040,7 @@
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_mutateTakingValue">mutateTakingValue</a>($json)
+                    <a href="#method_mutateTakingValue">mutateTakingValue</a>($value)
         
                                             <p>数据读取时，将通过此函数进行必要变形</p>                </div>
                 <div class="col-md-2"></div>
@@ -1252,7 +1278,7 @@
                     <a href="#method_syncValueToStore">syncValueToStore</a>()
         
                                             <p>将新的数据存储到 Store</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1267,10 +1293,52 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_options">options</a>(array $options)
+        
+                                            <p>options(['active' => 'Active', 'disabled' => 'Disabled'])</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HasOptions.html#method_options"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_values">values</a>(array|mixed $values)
+        
+                                            <p>values([1, 2, 3]) === options([1 => 1, 2 => 2, 3 => 3])
+values(1, 2, 3) === options([1 => 1, 2 => 2, 3 => 3])</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HasOptions.html#method_values"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_decode">decode</a>($json)
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HasOptions.html#method_getOptions"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptionLabelByValue">getOptionLabelByValue</a>($value)
+        
+                                            <p>在 Select 控件中，选项有可能是嵌套数组，所以有此函数</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/HasOptions.html#method_getOptionLabelByValue"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isChecked">isChecked</a>($value)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -1281,7 +1349,18 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_encode">encode</a>($data)
+                    <a href="#method_getInputName">getInputName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_separator">separator</a>($glue)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -1373,7 +1452,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize">
-        <div class="location">at         line 14</div>
+        <div class="location">at         line 29</div>
         <code>            protected        
     <strong>initialize</strong>()
         </code>
@@ -1756,7 +1835,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderReadonly">
-        <div class="location">in <a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderReadonly"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a> at         line 97</div>
+        <div class="location">at         line 36</div>
         <code>            protected        
     <strong>renderReadonly</strong>()
         </code>
@@ -2614,7 +2693,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getOriginalValue">
-        <div class="location">at         line 24</div>
+        <div class="location">in <a href="../../../Lego/Field/Concerns/ValueOperator.html#method_getOriginalValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a> at         line 45</div>
         <code>                    
     <strong>getOriginalValue</strong>()
         </code>
@@ -2862,9 +2941,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mutateTakingValue">
-        <div class="location">at         line 29</div>
+        <div class="location">at         line 60</div>
         <code>            protected        mixed
-    <strong>mutateTakingValue</strong>($json)
+    <strong>mutateTakingValue</strong>($value)
         </code>
     </h3>
     <div class="details">
@@ -2881,7 +2960,7 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$json</td>
+                <td>$value</td>
                 <td></td>
             </tr>
             </table>
@@ -2904,7 +2983,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mutateSavingValue">
-        <div class="location">at         line 34</div>
+        <div class="location">at         line 55</div>
         <code>            protected        mixed
     <strong>mutateSavingValue</strong>($value)
         </code>
@@ -3510,7 +3589,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_syncValueToStore">
-        <div class="location">at         line 49</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 115</div>
         <code>                    
     <strong>syncValueToStore</strong>()
         </code>
@@ -3573,10 +3652,91 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_decode">
-        <div class="location">at         line 39</div>
-        <code>            protected        
-    <strong>decode</strong>($json)
+                    <h3 id="method_options">
+        <div class="location">in <a href="../../../Lego/Field/Concerns/HasOptions.html#method_options"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a> at         line 13</div>
+        <code>                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+    <strong>options</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>options(['active' => 'Active', 'disabled' => 'Disabled'])</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Field\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_values">
+        <div class="location">in <a href="../../../Lego/Field/Concerns/HasOptions.html#method_values"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a> at         line 27</div>
+        <code>                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+    <strong>values</strong>(array|mixed $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>values([1, 2, 3]) === options([1 => 1, 2 => 2, 3 => 3])
+values(1, 2, 3) === options([1 => 1, 2 => 2, 3 => 3])</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Field\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">in <a href="../../../Lego/Field/Concerns/HasOptions.html#method_getOptions"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a> at         line 35</div>
+        <code>                    
+    <strong>getOptions</strong>()
         </code>
     </h3>
     <div class="details">
@@ -3584,12 +3744,33 @@ $field->scope(function (Query $filter, $value) {
     
 
                 <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptionLabelByValue">
+        <div class="location">in <a href="../../../Lego/Field/Concerns/HasOptions.html#method_getOptionLabelByValue"><abbr title="Lego\Field\Concerns\HasOptions">HasOptions</abbr></a> at         line 43</div>
+        <code>                    
+    <strong>getOptionLabelByValue</strong>($value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>在 Select 控件中，选项有可能是嵌套数组，所以有此函数</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$json</td>
+                <td>$value</td>
                 <td></td>
             </tr>
             </table>
@@ -3602,10 +3783,10 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_encode">
-        <div class="location">at         line 44</div>
-        <code>            protected        
-    <strong>encode</strong>($data)
+                    <h3 id="method_isChecked">
+        <div class="location">at         line 50</div>
+        <code>                    
+    <strong>isChecked</strong>($value)
         </code>
     </h3>
     <div class="details">
@@ -3618,7 +3799,55 @@ $field->scope(function (Query $filter, $value) {
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$data</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInputName">
+        <div class="location">at         line 12</div>
+        <code>                    
+    <strong>getInputName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_separator">
+        <div class="location">at         line 23</div>
+        <code>                    
+    <strong>separator</strong>($glue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$glue</td>
                 <td></td>
             </tr>
             </table>

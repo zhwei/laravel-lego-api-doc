@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Field\Provider\JSON | Laravel Lego API</title>
+    <title>Lego\Field\Provider\RichText | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Field_Provider_JSON" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Field_Provider_RichText" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -70,20 +70,20 @@
                                         <li><a href="../../../Lego/Field.html">Field</a></li>
                                         <li><a href="../../../Lego/Field/Provider.html">Provider</a></li>
     
-                <li>JSON</li>
+                <li>RichText</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            JSON
+            RichText
                 
         </h1>
     </div>
 
     <p>    class
-    <strong>JSON</strong>        extends <a href="../../../Lego/Field/Provider/Text.html"><abbr title="Lego\Field\Provider\Text">Text</abbr></a>
+    <strong>RichText</strong>        extends <a href="../../../Lego/Field/Provider/Textarea.html"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a>
 </p>
 
         
@@ -94,15 +94,6 @@
 
         
     <div class="container-fluid underlined">
-                    <div class="row">
-                <div class="col-md-6">
-                                            <a href="../../../Lego/Field/Concerns/DisabledInFilter.html"><abbr title="Lego\Field\Concerns\DisabledInFilter">DisabledInFilter</abbr></a>
-                                            
-                </div>
-                <div class="col-md-6">
-                    
-                </div>
-            </div>
                     <div class="row">
                 <div class="col-md-6">
                                             <a href="../../../Lego/Field/Concerns/FilterWhereContains.html"><abbr title="Lego\Field\Concerns\FilterWhereContains">FilterWhereContains</abbr></a>
@@ -356,14 +347,6 @@
                 <td class="last">对应的数据表字段名</td>
                 <td><small>from&nbsp;<a href="../../../Lego/Field/Field.html#property_column"><abbr title="Lego\Field\Field">Field</abbr></a></small></td>
             </tr>
-                    <tr>
-                <td class="type" id="property_jsonKey">
-                                        protected                                        
-                </td>
-                <td>$jsonKey</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
             </table>
 
     
@@ -421,7 +404,7 @@
                     <a href="#method_initialize">initialize</a>()
         
                                             <p>初始化对象</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -584,7 +567,7 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderEditable"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -595,7 +578,7 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderReadonly"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -916,7 +899,7 @@
                     <a href="#method_getOriginalValue">getOriginalValue</a>()
         
                                             <p>数据库原始值</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/ValueOperator.html#method_getOriginalValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1014,10 +997,10 @@
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_mutateTakingValue">mutateTakingValue</a>($json)
+                    <a href="#method_mutateTakingValue">mutateTakingValue</a>($value)
         
                                             <p>数据读取时，将通过此函数进行必要变形</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/ValueOperator.html#method_mutateTakingValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1027,7 +1010,7 @@
                     <a href="#method_mutateSavingValue">mutateSavingValue</a>($value)
         
                                             <p>Request 中提交的数据在存储前，将通过此函数进行必要的变形</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Concerns/ValueOperator.html#method_mutateSavingValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1252,7 +1235,7 @@
                     <a href="#method_syncValueToStore">syncValueToStore</a>()
         
                                             <p>将新的数据存储到 Store</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1270,22 +1253,44 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_decode">decode</a>($json)
+                    <a href="#method_cols">cols</a>($cols)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Textarea.html#method_cols"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_encode">encode</a>($data)
+                    <a href="#method_getCols">getCols</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Textarea.html#method_getCols"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rows">rows</a>($rows)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Textarea.html#method_rows"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRows">getRows</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Field/Provider/Textarea.html#method_getRows"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a></small></div>
             </div>
             </div>
 
@@ -1373,7 +1378,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize">
-        <div class="location">at         line 14</div>
+        <div class="location">in <a href="../../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 29</div>
         <code>            protected        
     <strong>initialize</strong>()
         </code>
@@ -1737,7 +1742,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderEditable">
-        <div class="location">in <a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderEditable"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a> at         line 92</div>
+        <div class="location">at         line 13</div>
         <code>            protected        
     <strong>renderEditable</strong>()
         </code>
@@ -1756,7 +1761,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderReadonly">
-        <div class="location">in <a href="../../../Lego/Foundation/Concerns/ModeOperator.html#method_renderReadonly"><abbr title="Lego\Foundation\Concerns\ModeOperator">ModeOperator</abbr></a> at         line 97</div>
+        <div class="location">at         line 8</div>
         <code>            protected        
     <strong>renderReadonly</strong>()
         </code>
@@ -2614,7 +2619,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getOriginalValue">
-        <div class="location">at         line 24</div>
+        <div class="location">in <a href="../../../Lego/Field/Concerns/ValueOperator.html#method_getOriginalValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a> at         line 45</div>
         <code>                    
     <strong>getOriginalValue</strong>()
         </code>
@@ -2862,9 +2867,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mutateTakingValue">
-        <div class="location">at         line 29</div>
+        <div class="location">in <a href="../../../Lego/Field/Concerns/ValueOperator.html#method_mutateTakingValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a> at         line 148</div>
         <code>            protected        mixed
-    <strong>mutateTakingValue</strong>($json)
+    <strong>mutateTakingValue</strong>($value)
         </code>
     </h3>
     <div class="details">
@@ -2881,7 +2886,7 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$json</td>
+                <td>$value</td>
                 <td></td>
             </tr>
             </table>
@@ -2904,7 +2909,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mutateSavingValue">
-        <div class="location">at         line 34</div>
+        <div class="location">in <a href="../../../Lego/Field/Concerns/ValueOperator.html#method_mutateSavingValue"><abbr title="Lego\Field\Concerns\ValueOperator">ValueOperator</abbr></a> at         line 162</div>
         <code>            protected        mixed
     <strong>mutateSavingValue</strong>($value)
         </code>
@@ -3510,7 +3515,7 @@ $field->scope(function (Query $filter, $value) {
             </div>
                     <div class="method-item">
                     <h3 id="method_syncValueToStore">
-        <div class="location">at         line 49</div>
+        <div class="location">in <a href="../../../Lego/Field/Field.html#method_syncValueToStore"><abbr title="Lego\Field\Field">Field</abbr></a> at         line 115</div>
         <code>                    
     <strong>syncValueToStore</strong>()
         </code>
@@ -3573,10 +3578,10 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_decode">
-        <div class="location">at         line 39</div>
-        <code>            protected        
-    <strong>decode</strong>($json)
+                    <h3 id="method_cols">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Textarea.html#method_cols"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a> at         line 15</div>
+        <code>                    
+    <strong>cols</strong>($cols)
         </code>
     </h3>
     <div class="details">
@@ -3589,7 +3594,7 @@ $field->scope(function (Query $filter, $value) {
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$json</td>
+                <td>$cols</td>
                 <td></td>
             </tr>
             </table>
@@ -3602,10 +3607,29 @@ $field->scope(function (Query $filter, $value) {
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_encode">
-        <div class="location">at         line 44</div>
-        <code>            protected        
-    <strong>encode</strong>($data)
+                    <h3 id="method_getCols">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Textarea.html#method_getCols"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a> at         line 20</div>
+        <code>                    
+    <strong>getCols</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rows">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Textarea.html#method_rows"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a> at         line 25</div>
+        <code>                    
+    <strong>rows</strong>($rows)
         </code>
     </h3>
     <div class="details">
@@ -3618,11 +3642,30 @@ $field->scope(function (Query $filter, $value) {
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$data</td>
+                <td>$rows</td>
                 <td></td>
             </tr>
             </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRows">
+        <div class="location">in <a href="../../../Lego/Field/Provider/Textarea.html#method_getRows"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a> at         line 30</div>
+        <code>                    
+    <strong>getRows</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
             
             
             

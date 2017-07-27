@@ -88,6 +88,8 @@
         
     
 
+            <div class="description">
+            <p>Class Filter</p>                    </div>
     
             <h2>Traits</h2>
 
@@ -108,7 +110,7 @@
                                             
                 </div>
                 <div class="col-md-6">
-                    Widget 中 Field 的分组功能
+                    
                 </div>
             </div>
                     <div class="row">
@@ -203,6 +205,30 @@
                 <td>$store</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../Lego/Widget/Concerns/Operable.html#property_store"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uniqueId">
+                                        protected                                        string
+                </td>
+                <td>$uniqueId</td>
+                <td class="last">控件 unique id ，注意：此 id 无法跨请求使用，每次请求都会重新生成</td>
+                <td><small>from&nbsp;<a href="../../Lego/Widget/Widget.html#property_uniqueId"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fields">
+                                        protected                                        <a href="../../Lego/Foundation/Fields.html"><abbr title="Lego\Foundation\Fields">Fields</abbr></a>|<abbr title="Illuminate\Support\Collection">Collection</abbr>
+                </td>
+                <td>$fields</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#property_fields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_groups">
+                                        protected                                        <a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>[]
+                </td>
+                <td>$groups</td>
+                <td class="last">Group List</td>
+                <td><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#property_groups"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></td>
             </tr>
             </table>
 
@@ -429,6 +455,17 @@
                     
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_uniqueId">uniqueId</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Widget.html#method_uniqueId"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_data">data</a>()
         
                                             <p class="no-description">No description</p>
@@ -499,13 +536,24 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]
+                    <abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]|<a href="../../Lego/Foundation/Fields.html"><abbr title="Lego\Foundation\Fields">Fields</abbr></a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_fields">fields</a>()
         
                                             <p>all fields</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_fields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_values">values</a>($fields = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_values"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -561,14 +609,322 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    <a href="../../Lego/Field/Provider/AutoComplete.html"><abbr title="Lego\Field\Provider\AutoComplete">AutoComplete</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addGroup">addGroup</a>($groupName, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+                    <a href="#method_addAutoComplete">addAutoComplete</a>(string  $fieldName, $fieldDescription = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_addGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addAutoComplete"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/CascadeSelect.html"><abbr title="Lego\Field\Provider\CascadeSelect">CascadeSelect</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCascadeSelect">addCascadeSelect</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addCascadeSelect"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Checkboxes.html"><abbr title="Lego\Field\Provider\Checkboxes">Checkboxes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCheckboxes">addCheckboxes</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addCheckboxes"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Date.html"><abbr title="Lego\Field\Provider\Date">Date</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDate">addDate</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addDate"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/DateRange.html"><abbr title="Lego\Field\Provider\DateRange">DateRange</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDateRange">addDateRange</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addDateRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Datetime.html"><abbr title="Lego\Field\Provider\Datetime">Datetime</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDatetime">addDatetime</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addDatetime"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/DatetimeRange.html"><abbr title="Lego\Field\Provider\DatetimeRange">DatetimeRange</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDatetimeRange">addDatetimeRange</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addDatetimeRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Hidden.html"><abbr title="Lego\Field\Provider\Hidden">Hidden</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHidden">addHidden</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addHidden"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/JSON.html"><abbr title="Lego\Field\Provider\JSON">JSON</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addJSON">addJSON</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addJSON"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Number.html"><abbr title="Lego\Field\Provider\Number">Number</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addNumber">addNumber</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addNumber"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/NumberRange.html"><abbr title="Lego\Field\Provider\NumberRange">NumberRange</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addNumberRange">addNumberRange</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addNumberRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Radios.html"><abbr title="Lego\Field\Provider\Radios">Radios</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRadios">addRadios</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addRadios"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Readonly.html"><abbr title="Lego\Field\Provider\Readonly">Readonly</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addReadonly">addReadonly</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addReadonly"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/RichText.html"><abbr title="Lego\Field\Provider\RichText">RichText</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRichText">addRichText</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addRichText"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Select.html"><abbr title="Lego\Field\Provider\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addSelect">addSelect</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addSelect"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Select2.html"><abbr title="Lego\Field\Provider\Select2">Select2</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addSelect2">addSelect2</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addSelect2"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Text.html"><abbr title="Lego\Field\Provider\Text">Text</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addText">addText</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addText"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Textarea.html"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTextarea">addTextarea</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addTextarea"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/Time.html"><abbr title="Lego\Field\Provider\Time">Time</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTime">addTime</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addTime"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Provider/TimeRange.html"><abbr title="Lego\Field\Provider\TimeRange">TimeRange</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTimeRange">addTimeRange</a>(string  $fieldName, $fieldDescription = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasFields.html#method_addTimeRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initializeHasGroups">initializeHasGroups</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_initializeHasGroups"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Widget\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_when">when</a>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|string $field, string $operator, mixed $expected, <a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
+        
+                                            <p>when $field's value = $value, call $closure add fields</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_when"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groups">groups</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_groups"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_group">group</a>($name, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p>注意：此函数会有两种返回值，此处略奇葩，但用起来方便，若需要通过 $name 获取 Group 请使用 getGroup 函数
+ 1、传入 $callback 时，返回 Group
+ 2、反之，返回 $this ，方便链式调用</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_group"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGroup">getGroup</a>($name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_getGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_startGroup">startGroup</a>($name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_startGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getActiveGroups">getActiveGroups</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_getActiveGroups"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentGroup">currentGroup</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_currentGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_stopGroup">stopGroup</a>($name = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Lego/Widget/Concerns/HasGroups.html#method_stopGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -576,6 +932,50 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_grid">grid</a>($syncFields = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRightTopButton">addRightTopButton</a>($text, $url = null, $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRightBottomButton">addRightBottomButton</a>($text, $url = null, $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLeftTopButton">addLeftTopButton</a>($text, $url = null, $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLeftBottomButton">addLeftBottomButton</a>($text, $url = null, $id = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -688,7 +1088,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at         line 15</div>
+        <div class="location">at         line 23</div>
         <code>                    string
     <strong>render</strong>()
         </code>
@@ -854,7 +1254,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getButtons">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_getButtons"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 29</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_getButtons"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 31</div>
         <code>                    
     <strong>getButtons</strong>($location)
         </code>
@@ -883,7 +1283,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addButton">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_addButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 35</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_addButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 37</div>
         <code>                    
     <strong>addButton</strong>($location, $text, $url = null, $id = null)
         </code>
@@ -927,7 +1327,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeButton">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_removeButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 43</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasButtons.html#method_removeButton"><abbr title="Lego\Widget\Concerns\HasButtons">HasButtons</abbr></a> at         line 45</div>
         <code>                    
     <strong>removeButton</strong>($location, $text)
         </code>
@@ -1028,7 +1428,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../Lego/Widget/Widget.html#method___construct"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 24</div>
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method___construct"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 30</div>
         <code>                    
     <strong>__construct</strong>($data)
         </code>
@@ -1057,7 +1457,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_transformer">
-        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_transformer"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 37</div>
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_transformer"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 45</div>
         <code>            protected        
     <strong>transformer</strong>($data)
         </code>
@@ -1087,8 +1487,27 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_uniqueId">
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_uniqueId"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 50</div>
+        <code>                    
+    <strong>uniqueId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_data">
-        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_data"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 42</div>
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_data"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 55</div>
         <code>                    
     <strong>data</strong>()
         </code>
@@ -1107,7 +1526,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_view">
-        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_view"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 70</div>
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_view"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 83</div>
         <code>                    mixed
     <strong>view</strong>($view, array $data = [], array $mergeData = [])
         </code>
@@ -1157,7 +1576,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewriteResponse">
-        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_rewriteResponse"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 86</div>
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_rewriteResponse"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 99</div>
         <code>            protected        <abbr title="Lego\Widget\$this">$this</abbr>
     <strong>rewriteResponse</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $response)
         </code>
@@ -1197,7 +1616,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_response">
-        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_response"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 99</div>
+        <div class="location">in <a href="../../Lego/Widget/Widget.html#method_response"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 112</div>
         <code>final                    mixed
     <strong>response</strong>(mixed $response)
         </code>
@@ -1237,7 +1656,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at         line 28</div>
+        <div class="location">at         line 36</div>
         <code>                    
     <strong>process</strong>()
         </code>
@@ -1258,7 +1677,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initializeHasFields">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_initializeHasFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 19</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_initializeHasFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 42</div>
         <code>            protected        
     <strong>initializeHasFields</strong>()
         </code>
@@ -1277,7 +1696,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFieldElementNamePrefix">
-        <div class="location">at         line 20</div>
+        <div class="location">at         line 28</div>
         <code>            protected        
     <strong>getFieldElementNamePrefix</strong>()
         </code>
@@ -1296,8 +1715,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fields">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_fields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 45</div>
-        <code>                    <abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_fields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 73</div>
+        <code>                    <abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]|<a href="../../Lego/Foundation/Fields.html"><abbr title="Lego\Foundation\Fields">Fields</abbr></a>
     <strong>fields</strong>()
         </code>
     </h3>
@@ -1313,7 +1732,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]</td>
+            <td><abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]|<a href="../../Lego/Foundation/Fields.html"><abbr title="Lego\Foundation\Fields">Fields</abbr></a></td>
             <td></td>
         </tr>
     </table>
@@ -1325,8 +1744,37 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_values">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_values"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 78</div>
+        <code>                    
+    <strong>values</strong>($fields = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_editableFields">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_editableFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 55</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_editableFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 100</div>
         <code>                    <abbr title="Illuminate\Support\Collection">Collection</abbr>|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[]
     <strong>editableFields</strong>()
         </code>
@@ -1356,7 +1804,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_field">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_field"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 67</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_field"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 119</div>
         <code>                    <a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|null
     <strong>field</strong>($fieldName)
         </code>
@@ -1396,7 +1844,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addField">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addField"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 72</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addField"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 124</div>
         <code>                    
     <strong>addField</strong>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a> $field)
         </code>
@@ -1425,7 +1873,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_processFields">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_processFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 79</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_processFields"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 133</div>
         <code>            protected        
     <strong>processFields</strong>()
         </code>
@@ -1444,7 +1892,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_required">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_required"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 92</div>
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_required"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 146</div>
         <code>                    <abbr title="Lego\Widget\Concerns\$this">$this</abbr>
     <strong>required</strong>(array[]|<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>[] $fields = [])
         </code>
@@ -1483,10 +1931,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_addGroup">
-        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_addGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 19</div>
-        <code>                    
-    <strong>addGroup</strong>($groupName, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+                    <h3 id="method_addAutoComplete">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addAutoComplete"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/AutoComplete.html"><abbr title="Lego\Field\Provider\AutoComplete">AutoComplete</abbr></a>
+    <strong>addAutoComplete</strong>(string  $fieldName, $fieldDescription = null)
         </code>
     </h3>
     <div class="details">
@@ -1498,8 +1946,974 @@
 
                     <table class="table table-condensed">
                     <tr>
+                <td>string </td>
+                <td>$fieldName</td>
                 <td></td>
-                <td>$groupName</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/AutoComplete.html"><abbr title="Lego\Field\Provider\AutoComplete">AutoComplete</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCascadeSelect">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addCascadeSelect"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/CascadeSelect.html"><abbr title="Lego\Field\Provider\CascadeSelect">CascadeSelect</abbr></a>
+    <strong>addCascadeSelect</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/CascadeSelect.html"><abbr title="Lego\Field\Provider\CascadeSelect">CascadeSelect</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCheckboxes">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addCheckboxes"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Checkboxes.html"><abbr title="Lego\Field\Provider\Checkboxes">Checkboxes</abbr></a>
+    <strong>addCheckboxes</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Checkboxes.html"><abbr title="Lego\Field\Provider\Checkboxes">Checkboxes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDate">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addDate"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Date.html"><abbr title="Lego\Field\Provider\Date">Date</abbr></a>
+    <strong>addDate</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Date.html"><abbr title="Lego\Field\Provider\Date">Date</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDateRange">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addDateRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/DateRange.html"><abbr title="Lego\Field\Provider\DateRange">DateRange</abbr></a>
+    <strong>addDateRange</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/DateRange.html"><abbr title="Lego\Field\Provider\DateRange">DateRange</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDatetime">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addDatetime"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Datetime.html"><abbr title="Lego\Field\Provider\Datetime">Datetime</abbr></a>
+    <strong>addDatetime</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Datetime.html"><abbr title="Lego\Field\Provider\Datetime">Datetime</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDatetimeRange">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addDatetimeRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/DatetimeRange.html"><abbr title="Lego\Field\Provider\DatetimeRange">DatetimeRange</abbr></a>
+    <strong>addDatetimeRange</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/DatetimeRange.html"><abbr title="Lego\Field\Provider\DatetimeRange">DatetimeRange</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHidden">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addHidden"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Hidden.html"><abbr title="Lego\Field\Provider\Hidden">Hidden</abbr></a>
+    <strong>addHidden</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Hidden.html"><abbr title="Lego\Field\Provider\Hidden">Hidden</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addJSON">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addJSON"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/JSON.html"><abbr title="Lego\Field\Provider\JSON">JSON</abbr></a>
+    <strong>addJSON</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/JSON.html"><abbr title="Lego\Field\Provider\JSON">JSON</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addNumber">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addNumber"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Number.html"><abbr title="Lego\Field\Provider\Number">Number</abbr></a>
+    <strong>addNumber</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Number.html"><abbr title="Lego\Field\Provider\Number">Number</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addNumberRange">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addNumberRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/NumberRange.html"><abbr title="Lego\Field\Provider\NumberRange">NumberRange</abbr></a>
+    <strong>addNumberRange</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/NumberRange.html"><abbr title="Lego\Field\Provider\NumberRange">NumberRange</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRadios">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addRadios"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Radios.html"><abbr title="Lego\Field\Provider\Radios">Radios</abbr></a>
+    <strong>addRadios</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Radios.html"><abbr title="Lego\Field\Provider\Radios">Radios</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addReadonly">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addReadonly"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Readonly.html"><abbr title="Lego\Field\Provider\Readonly">Readonly</abbr></a>
+    <strong>addReadonly</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Readonly.html"><abbr title="Lego\Field\Provider\Readonly">Readonly</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRichText">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addRichText"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/RichText.html"><abbr title="Lego\Field\Provider\RichText">RichText</abbr></a>
+    <strong>addRichText</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/RichText.html"><abbr title="Lego\Field\Provider\RichText">RichText</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addSelect">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addSelect"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Select.html"><abbr title="Lego\Field\Provider\Select">Select</abbr></a>
+    <strong>addSelect</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Select.html"><abbr title="Lego\Field\Provider\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addSelect2">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addSelect2"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Select2.html"><abbr title="Lego\Field\Provider\Select2">Select2</abbr></a>
+    <strong>addSelect2</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Select2.html"><abbr title="Lego\Field\Provider\Select2">Select2</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addText">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addText"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Text.html"><abbr title="Lego\Field\Provider\Text">Text</abbr></a>
+    <strong>addText</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Text.html"><abbr title="Lego\Field\Provider\Text">Text</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTextarea">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addTextarea"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Textarea.html"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a>
+    <strong>addTextarea</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Textarea.html"><abbr title="Lego\Field\Provider\Textarea">Textarea</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTime">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addTime"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/Time.html"><abbr title="Lego\Field\Provider\Time">Time</abbr></a>
+    <strong>addTime</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/Time.html"><abbr title="Lego\Field\Provider\Time">Time</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTimeRange">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasFields.html#method_addTimeRange"><abbr title="Lego\Widget\Concerns\HasFields">HasFields</abbr></a> at         line 35</div>
+        <code>                    <a href="../../Lego/Field/Provider/TimeRange.html"><abbr title="Lego\Field\Provider\TimeRange">TimeRange</abbr></a>
+    <strong>addTimeRange</strong>(string  $fieldName, $fieldDescription = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldDescription</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Provider/TimeRange.html"><abbr title="Lego\Field\Provider\TimeRange">TimeRange</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeHasGroups">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_initializeHasGroups"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 13</div>
+        <code>            protected        
+    <strong>initializeHasGroups</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_when"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 31</div>
+        <code>                    <abbr title="Lego\Widget\Concerns\$this">$this</abbr>
+    <strong>when</strong>(<a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|string $field, string $operator, mixed $expected, <a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>when $field's value = $value, call $closure add fields</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Lego/Field/Field.html"><abbr title="Lego\Field\Field">Field</abbr></a>|string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expected</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Widget\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groups">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_groups"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 61</div>
+        <code>                    <a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>[]
+    <strong>groups</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_group">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_group"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 71</div>
+        <code>                    
+    <strong>group</strong>($name, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>注意：此函数会有两种返回值，此处略奇葩，但用起来方便，若需要通过 $name 获取 Group 请使用 getGroup 函数
+ 1、传入 $callback 时，返回 Group
+ 2、反之，返回 $this ，方便链式调用</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
                 <td></td>
             </tr>
                     <tr>
@@ -1517,8 +2931,151 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getGroup">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_getGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 89</div>
+        <code>                    
+    <strong>getGroup</strong>($name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_startGroup">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_startGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 100</div>
+        <code>            protected        
+    <strong>startGroup</strong>($name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActiveGroups">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_getActiveGroups"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 117</div>
+        <code>            protected        <a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>[]
+    <strong>getActiveGroups</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentGroup">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_currentGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 125</div>
+        <code>            protected        <a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a>
+    <strong>currentGroup</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Field/Group.html"><abbr title="Lego\Field\Group">Group</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stopGroup">
+        <div class="location">in <a href="../../Lego/Widget/Concerns/HasGroups.html#method_stopGroup"><abbr title="Lego\Widget\Concerns\HasGroups">HasGroups</abbr></a> at         line 133</div>
+        <code>            protected        
+    <strong>stopGroup</strong>($name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_grid">
-        <div class="location">at         line 48</div>
+        <div class="location">at         line 56</div>
         <code>                    
     <strong>grid</strong>($syncFields = false)
         </code>
@@ -1539,6 +3096,198 @@
             </table>
 
             
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRightTopButton">
+        <div class="location">at         line 15</div>
+        <code>                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addRightTopButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRightBottomButton">
+        <div class="location">at         line 15</div>
+        <code>                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addRightBottomButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLeftTopButton">
+        <div class="location">at         line 15</div>
+        <code>                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addLeftTopButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLeftBottomButton">
+        <div class="location">at         line 15</div>
+        <code>                    <a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addLeftBottomButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>

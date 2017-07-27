@@ -83,7 +83,8 @@
     </div>
 
     <p>    class
-    <strong>Batch</strong>
+    <strong>Batch</strong>        implements
+        <abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr>
 </p>
 
         
@@ -98,6 +99,13 @@
             <table class="table table-condensed">
                     <tr>
                 <td>IDS_QUERY_NAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OPEN_TARGET_DEFAULT</td>
                 <td class="last">
                     <p><em></em></p>
                     <p></p>
@@ -181,6 +189,39 @@
                     
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_openInNewTab">openInNewTab</a>($condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_openInPopup">openInPopup</a>($width = 500, $height = 500, $condition = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetOpenTarget">resetOpenTarget</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_form">form</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $builder)
         
                                             <p class="no-description">No description</p>
@@ -220,6 +261,17 @@
                                     </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -228,7 +280,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 57</div>
+        <div class="location">at         line 61</div>
         <code>                    
     <strong>__construct</strong>($name, <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query, $primaryKey = &#039;id&#039;)
         </code>
@@ -267,7 +319,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_name">
-        <div class="location">at         line 64</div>
+        <div class="location">at         line 68</div>
         <code>                    
     <strong>name</strong>()
         </code>
@@ -286,7 +338,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_message">
-        <div class="location">at         line 69</div>
+        <div class="location">at         line 73</div>
         <code>                    
     <strong>message</strong>($message)
         </code>
@@ -315,7 +367,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPrimaryKey">
-        <div class="location">at         line 75</div>
+        <div class="location">at         line 79</div>
         <code>                    
     <strong>getPrimaryKey</strong>()
         </code>
@@ -334,7 +386,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_primaryKey">
-        <div class="location">at         line 80</div>
+        <div class="location">at         line 84</div>
         <code>                    
     <strong>primaryKey</strong>($key)
         </code>
@@ -363,7 +415,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_url">
-        <div class="location">at         line 86</div>
+        <div class="location">at         line 90</div>
         <code>                    
     <strong>url</strong>()
         </code>
@@ -381,8 +433,95 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_openInNewTab">
+        <div class="location">at         line 95</div>
+        <code>                    
+    <strong>openInNewTab</strong>($condition = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_openInPopup">
+        <div class="location">at         line 103</div>
+        <code>                    
+    <strong>openInPopup</strong>($width = 500, $height = 500, $condition = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$height</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetOpenTarget">
+        <div class="location">at         line 111</div>
+        <code>                    
+    <strong>resetOpenTarget</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_form">
-        <div class="location">at         line 91</div>
+        <div class="location">at         line 117</div>
         <code>                    
     <strong>form</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $builder)
         </code>
@@ -411,7 +550,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_each">
-        <div class="location">at         line 97</div>
+        <div class="location">at         line 123</div>
         <code>                    
     <strong>each</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
         </code>
@@ -440,7 +579,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_handle">
-        <div class="location">at         line 104</div>
+        <div class="location">at         line 130</div>
         <code>                    
     <strong>handle</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
         </code>
@@ -469,7 +608,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_action">
-        <div class="location">at         line 111</div>
+        <div class="location">at         line 137</div>
         <code>                    
     <strong>action</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $action)
         </code>
@@ -489,6 +628,25 @@
             </tr>
             </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">at         line 248</div>
+        <code>                    
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
             
             
             

@@ -89,6 +89,8 @@
         
     
 
+            <div class="description">
+            <p>Class Grid</p>                    </div>
     
             <h2>Traits</h2>
 
@@ -206,6 +208,14 @@
                 <td><small>from&nbsp;<a href="../../../Lego/Widget/Concerns/Operable.html#property_store"><abbr title="Lego\Widget\Concerns\Operable">Operable</abbr></a></small></td>
             </tr>
                     <tr>
+                <td class="type" id="property_uniqueId">
+                                        protected                                        string
+                </td>
+                <td>$uniqueId</td>
+                <td class="last">控件 unique id ，注意：此 id 无法跨请求使用，每次请求都会重新生成</td>
+                <td><small>from&nbsp;<a href="../../../Lego/Widget/Widget.html#property_uniqueId"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_cells">
                                         protected                                        <a href="../../../Lego/Widget/Grid/Cell.html"><abbr title="Lego\Widget\Grid\Cell">Cell</abbr></a>[]
                 </td>
@@ -215,7 +225,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_batches">
-                                        protected                                        
+                                        protected                                        <a href="../../../Lego/Widget/Grid/Batch.html"><abbr title="Lego\Widget\Grid\Batch">Batch</abbr></a>[]
                 </td>
                 <td>$batches</td>
                 <td class="last"></td>
@@ -243,6 +253,14 @@
                 </td>
                 <td>$filter</td>
                 <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responsive">
+                                        protected                                        bool
+                </td>
+                <td>$responsive</td>
+                <td class="last">移动端列表页是否使用移动版</td>
                 <td></td>
             </tr>
             </table>
@@ -302,7 +320,7 @@
                     <a href="#method_initialize">initialize</a>()
         
                                             <p>初始化对象</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -470,6 +488,17 @@
                     
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_uniqueId">uniqueId</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Widget.html#method_uniqueId"><abbr title="Lego\Widget\Widget">Widget</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_data">data</a>()
         
                                             <p class="no-description">No description</p>
@@ -597,6 +626,17 @@
                     
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_batchesAsArray">batchesAsArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batchesAsArray"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_batch">batch</a>($name)
         
                                             <p class="no-description">No description</p>
@@ -652,10 +692,31 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_orderBy">orderBy</a>($attribute, bool $desc = false)
+                    <a href="#method_orderBy">orderBy</a>($column, bool $desc = false)
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orderByDesc">orderByDesc</a>($column)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Widget\Grid\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_responsive">responsive</a>(bool $condition = true)
+        
+                                            <p>移动端列表页是否使用移动版</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -682,6 +743,17 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <abbr title="Maatwebsite\Excel\Writers\LaravelExcelWriter">LaravelExcelWriter</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exportAsExcel">exportAsExcel</a>($filename)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8 type">
@@ -697,6 +769,83 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_paginator">paginator</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getKeys">getKeys</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResult">getResult</a>($plain = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPlainResult">getPlainResult</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRightTopButton">addRightTopButton</a>($text, $url = null, $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRightBottomButton">addRightBottomButton</a>($text, $url = null, $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLeftTopButton">addLeftTopButton</a>($text, $url = null, $id = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLeftBottomButton">addLeftBottomButton</a>($text, $url = null, $id = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -788,7 +937,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize">
-        <div class="location">in <a href="../../../Lego/Foundation/Concerns/InitializeOperator.html#method_initialize"><abbr title="Lego\Foundation\Concerns\InitializeOperator">InitializeOperator</abbr></a> at         line 29</div>
+        <div class="location">at         line 49</div>
         <code>            protected        
     <strong>initialize</strong>()
         </code>
@@ -809,7 +958,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at         line 151</div>
+        <div class="location">at         line 192</div>
         <code>                    string
     <strong>render</strong>()
         </code>
@@ -1149,7 +1298,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method___construct"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 24</div>
+        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method___construct"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 30</div>
         <code>                    
     <strong>__construct</strong>($data)
         </code>
@@ -1178,7 +1327,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_transformer">
-        <div class="location">at         line 21</div>
+        <div class="location">at         line 38</div>
         <code>            protected        
     <strong>transformer</strong>($data)
         </code>
@@ -1208,8 +1357,27 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_uniqueId">
+        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_uniqueId"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 50</div>
+        <code>                    
+    <strong>uniqueId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_data">
-        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_data"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 42</div>
+        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_data"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 55</div>
         <code>                    
     <strong>data</strong>()
         </code>
@@ -1228,7 +1396,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_view">
-        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_view"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 70</div>
+        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_view"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 83</div>
         <code>                    mixed
     <strong>view</strong>($view, array $data = [], array $mergeData = [])
         </code>
@@ -1278,7 +1446,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewriteResponse">
-        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_rewriteResponse"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 86</div>
+        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_rewriteResponse"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 99</div>
         <code>            protected        <abbr title="Lego\Widget\$this">$this</abbr>
     <strong>rewriteResponse</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $response)
         </code>
@@ -1318,7 +1486,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_response">
-        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_response"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 99</div>
+        <div class="location">in <a href="../../../Lego/Widget/Widget.html#method_response"><abbr title="Lego\Widget\Widget">Widget</abbr></a> at         line 112</div>
         <code>final                    mixed
     <strong>response</strong>(mixed $response)
         </code>
@@ -1358,7 +1526,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at         line 133</div>
+        <div class="location">at         line 174</div>
         <code>                    
     <strong>process</strong>()
         </code>
@@ -1535,7 +1703,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addBatch">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_addBatch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 13</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_addBatch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 16</div>
         <code>                    
     <strong>addBatch</strong>($name, <a target="_blank" href="http://php.net/Closure">Closure</a> $action = null, $primaryKey = &#039;id&#039;)
         </code>
@@ -1574,7 +1742,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_batches">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batches"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 37</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batches"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 40</div>
         <code>                    
     <strong>batches</strong>()
         </code>
@@ -1592,8 +1760,27 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_batchesAsArray">
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batchesAsArray"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 45</div>
+        <code>                    
+    <strong>batchesAsArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_batch">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 42</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batch"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 54</div>
         <code>                    
     <strong>batch</strong>($name)
         </code>
@@ -1622,7 +1809,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_enableBatchMode">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_enableBatchMode"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 47</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_enableBatchMode"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 59</div>
         <code>                    
     <strong>enableBatchMode</strong>()
         </code>
@@ -1641,7 +1828,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_disableBatchMode">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_disableBatchMode"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 52</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_disableBatchMode"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 68</div>
         <code>                    
     <strong>disableBatchMode</strong>()
         </code>
@@ -1660,7 +1847,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_batchModeEnabled">
-        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batchModeEnabled"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 57</div>
+        <div class="location">in <a href="../../../Lego/Widget/Grid/Concerns/HasBatch.html#method_batchModeEnabled"><abbr title="Lego\Widget\Grid\Concerns\HasBatch">HasBatch</abbr></a> at         line 73</div>
         <code>                    
     <strong>batchModeEnabled</strong>()
         </code>
@@ -1679,7 +1866,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_filter">
-        <div class="location">at         line 32</div>
+        <div class="location">at         line 54</div>
         <code>                    
     <strong>filter</strong>()
         </code>
@@ -1698,9 +1885,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_orderBy">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 59</div>
         <code>                    
-    <strong>orderBy</strong>($attribute, bool $desc = false)
+    <strong>orderBy</strong>($column, bool $desc = false)
         </code>
     </h3>
     <div class="details">
@@ -1713,7 +1900,7 @@
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$attribute</td>
+                <td>$column</td>
                 <td></td>
             </tr>
                     <tr>
@@ -1731,8 +1918,77 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_orderByDesc">
+        <div class="location">at         line 66</div>
+        <code>                    
+    <strong>orderByDesc</strong>($column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_responsive">
+        <div class="location">at         line 76</div>
+        <code>                    <abbr title="Lego\Widget\Grid\$this">$this</abbr>
+    <strong>responsive</strong>(bool $condition = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>移动端列表页是否使用移动版</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Widget\Grid\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_exports">
-        <div class="location">at         line 50</div>
+        <div class="location">at         line 88</div>
         <code>                    
     <strong>exports</strong>()
         </code>
@@ -1751,7 +2007,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_export">
-        <div class="location">at         line 55</div>
+        <div class="location">at         line 93</div>
         <code>                    
     <strong>export</strong>($name, <a target="_blank" href="http://php.net/Closure">Closure</a> $exporting = null)
         </code>
@@ -1784,8 +2040,46 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_exportAsExcel">
+        <div class="location">at         line 114</div>
+        <code>                    <abbr title="Maatwebsite\Excel\Writers\LaravelExcelWriter">LaravelExcelWriter</abbr>
+    <strong>exportAsExcel</strong>($filename)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maatwebsite\Excel\Writers\LaravelExcelWriter">LaravelExcelWriter</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_paginate">
-        <div class="location">at         line 108</div>
+        <div class="location">at         line 149</div>
         <code>                    
     <strong>paginate</strong>(int $perPage, $pageName = null)
         </code>
@@ -1819,7 +2113,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_paginator">
-        <div class="location">at         line 116</div>
+        <div class="location">at         line 157</div>
         <code>                    
     <strong>paginator</strong>()
         </code>
@@ -1830,6 +2124,274 @@
 
                 <div class="tags">
             
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKeys">
+        <div class="location">at         line 203</div>
+        <code>                    <abbr title="Illuminate\Support\Collection">Collection</abbr>
+    <strong>getKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResult">
+        <div class="location">at         line 210</div>
+        <code>                    
+    <strong>getResult</strong>($plain = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$plain</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlainResult">
+        <div class="location">at         line 227</div>
+        <code>                    
+    <strong>getPlainResult</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRightTopButton">
+        <div class="location">at         line 23</div>
+        <code>                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addRightTopButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRightBottomButton">
+        <div class="location">at         line 23</div>
+        <code>                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addRightBottomButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLeftTopButton">
+        <div class="location">at         line 23</div>
+        <code>                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addLeftTopButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLeftBottomButton">
+        <div class="location">at         line 23</div>
+        <code>                    <a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a>
+    <strong>addLeftBottomButton</strong>($text, $url = null, $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Lego/Foundation/Button.html"><abbr title="Lego\Foundation\Button">Button</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>

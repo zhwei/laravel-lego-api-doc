@@ -155,7 +155,7 @@
                     <abbr title="Lego\Field\Concerns\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_validator">validator</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $validator)
+                    <a href="#method_validator">validator</a>(string|<a target="_blank" href="http://php.net/Closure">Closure</a> $validator, bool $condition = true)
         
                                             <p>对 input 值的自定义校验，支持调用多次</p>                </div>
                 <div class="col-md-2"></div>
@@ -329,9 +329,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_validator">
-        <div class="location">at         line 80</div>
+        <div class="location">at         line 81</div>
         <code>                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
-    <strong>validator</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $validator)
+    <strong>validator</strong>(string|<a target="_blank" href="http://php.net/Closure">Closure</a> $validator, bool $condition = true)
         </code>
     </h3>
     <div class="details">
@@ -345,8 +345,13 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>string|<a target="_blank" href="http://php.net/Closure">Closure</a></td>
                 <td>$validator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
                 <td></td>
             </tr>
             </table>
@@ -369,7 +374,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_validate">
-        <div class="location">at         line 94</div>
+        <div class="location">at         line 103</div>
         <code>                    bool
     <strong>validate</strong>($data = [])
         </code>
@@ -409,7 +414,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unique">
-        <div class="location">at         line 146</div>
+        <div class="location">at         line 155</div>
         <code>                    
     <strong>unique</strong>($id = null, $idColumn = null, $extra = null)
         </code>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Lego\Field\Concerns\HasRelation | Laravel Lego API</title>
+    <title>Lego\Field\Concerns\HasOptions | Laravel Lego API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Lego_Field_Concerns_HasRelation" data-root-path="../../../">
+    <body id="class" data-name="class:Lego_Field_Concerns_HasOptions" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -70,27 +70,25 @@
                                         <li><a href="../../../Lego/Field.html">Field</a></li>
                                         <li><a href="../../../Lego/Field/Concerns.html">Concerns</a></li>
     
-                <li>HasRelation</li>
+                <li>HasOptions</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            HasRelation
+            HasOptions
                 
         </h1>
     </div>
 
     <p>    trait
-    <strong>HasRelation</strong>
+    <strong>HasOptions</strong>
 </p>
 
         
     
 
-            <div class="description">
-            <p>Field 中 Relation 的处理逻辑</p>            <p>Relation example: school.city.name</p>        </div>
     
     
     
@@ -98,27 +96,11 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_foreignKey">
-                                        protected                                        string
+                <td class="type" id="property_options">
+                                        protected                                        
                 </td>
-                <td>$foreignKey</td>
-                <td class="last">eg: city_id</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_relation">
-                                        protected                                        string
-                </td>
-                <td>$relation</td>
-                <td class="last">eg: school.city</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_relationColumn">
-                                        protected                                        string
-                </td>
-                <td>$relationColumn</td>
-                <td class="last">eg: name</td>
+                <td>$options</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
             </table>
@@ -129,10 +111,31 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_options">options</a>(array $options)
+        
+                                            <p>options(['active' => 'Active', 'disabled' => 'Disabled'])</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_values">values</a>(array|mixed $values)
+        
+                                            <p>values([1, 2, 3]) === options([1 => 1, 2 => 2, 3 => 3])
+values(1, 2, 3) === options([1 => 1, 2 => 2, 3 => 3])</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_initializeHasRelation">initializeHasRelation</a>()
+                    <a href="#method_getOptions">getOptions</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -143,42 +146,9 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_relation">relation</a>()
+                    <a href="#method_getOptionLabelByValue">getOptionLabelByValue</a>($value)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_foreignKey">foreignKey</a>()
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getColumnPathOfRelation">getColumnPathOfRelation</a>($column)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_filterWithRelation">filterWithRelation</a>(<a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query, <a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
-        
-                                            <p>嵌套查询的辅助函数</p>                </div>
+                                            <p>在 Select 控件中，选项有可能是嵌套数组，所以有此函数</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -188,96 +158,10 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_initializeHasRelation">
-        <div class="location">at         line 33</div>
-        <code>            protected        
-    <strong>initializeHasRelation</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_relation">
-        <div class="location">at         line 45</div>
-        <code>                    
-    <strong>relation</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_foreignKey">
-        <div class="location">at         line 50</div>
-        <code>                    
-    <strong>foreignKey</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getColumnPathOfRelation">
-        <div class="location">at         line 55</div>
-        <code>                    
-    <strong>getColumnPathOfRelation</strong>($column)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td></td>
-                <td>$column</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_filterWithRelation">
-        <div class="location">at         line 67</div>
-        <code>            protected        <a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a>
-    <strong>filterWithRelation</strong>(<a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a> $query, <a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
+                    <h3 id="method_options">
+        <div class="location">at         line 13</div>
+        <code>                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+    <strong>options</strong>(array $options)
         </code>
     </h3>
     <div class="details">
@@ -285,19 +169,14 @@
     
 
                     <div class="method-description">
-                                    <p>嵌套查询的辅助函数</p>                                </div>
+                                    <p>options(['active' => 'Active', 'disabled' => 'Disabled'])</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a></td>
-                <td>$query</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
-                <td>$closure</td>
+                <td>array</td>
+                <td>$options</td>
                 <td></td>
             </tr>
             </table>
@@ -307,11 +186,102 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Lego/Operator/Query/Query.html"><abbr title="Lego\Operator\Query\Query">Query</abbr></a></td>
+            <td><abbr title="Lego\Field\Concerns\$this">$this</abbr></td>
             <td></td>
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_values">
+        <div class="location">at         line 27</div>
+        <code>                    <abbr title="Lego\Field\Concerns\$this">$this</abbr>
+    <strong>values</strong>(array|mixed $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>values([1, 2, 3]) === options([1 => 1, 2 => 2, 3 => 3])
+values(1, 2, 3) === options([1 => 1, 2 => 2, 3 => 3])</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Lego\Field\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">at         line 35</div>
+        <code>                    
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptionLabelByValue">
+        <div class="location">at         line 43</div>
+        <code>                    
+    <strong>getOptionLabelByValue</strong>($value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>在 Select 控件中，选项有可能是嵌套数组，所以有此函数</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
             
             
                     </div>

@@ -89,6 +89,25 @@
         
     
 
+            <div class="description">
+            <p>Field 中数据承载部分</p>            <p><ul>
+<li><p>set ：填充原始属性值，不推荐重写</p></li>
+<li><p>get ：读取原始属性值，不推荐重写</p></li>
+<li><p>take ：常用场景值的调用部分</p>
+
+<ul>
+<li>例如：takeInputValue() ，用于返回用户输入时的默认值，
+     此默认值可能是数据库中的存储值，也有可能是开发者通过接口函数传入的值，
+     此函数会根据优先级不同，返回特定的值</li>
+<li>如果需要重写时，先考虑下是否可以通过已有的 mutate 系列函数实现</li>
+</ul></li>
+<li><p>mutate ：对值的改正逻辑，接受参数，不依赖属性</p>
+
+<ul>
+<li>例如：mutateSavingValue($value) ：数据入库前将通过此函数进行必要修正</li>
+</ul></li>
+</ul>
+</p>        </div>
     
     
     
@@ -140,8 +159,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_getOriginalValue">getOriginalValue</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>数据库原始值</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -151,8 +169,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_setOriginalValue">setOriginalValue</a>($originalValue)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>数据库原始值</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -162,8 +179,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_getNewValue">getNewValue</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>当前表单中提交的值</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -173,8 +189,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_setNewValue">setNewValue</a>($value)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>当前表单中提交的值，不推荐在 Lego 外部调用，也就是不推荐在 Lego 外部修改</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -184,8 +199,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_getDisplayValue">getDisplayValue</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>获取只读模式下展示给用户的值</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -195,8 +209,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_setDisplayValue">setDisplayValue</a>($displayValue)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>设置只读模式下展示给用户的值</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -206,8 +219,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_default">default</a>($value)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>当前 Field 的默认值</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -226,9 +238,9 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_takeDefaultInputValue">takeDefaultInputValue</a>()
+                    <a href="#method_takeInputValue">takeInputValue</a>()
         
-                                            <p>输入框中显示给用户的值</p>                </div>
+                                            <p>用户输入时展示给用户的默认值</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -236,10 +248,29 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_takeDefaultShowValue">takeDefaultShowValue</a>()
+                    <a href="#method_takeShowValue">takeShowValue</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>只读模式下展示给用户的值</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mutateTakingValue">mutateTakingValue</a>($value)
+        
+                                            <p>数据读取时，将通过此函数进行必要变形</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mutateSavingValue">mutateSavingValue</a>($value)
+        
+                                            <p>Request 中提交的数据在存储前，将通过此函数进行必要的变形</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -250,7 +281,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getOriginalValue">
-        <div class="location">at         line 25</div>
+        <div class="location">at         line 45</div>
         <code>                    
     <strong>getOriginalValue</strong>()
         </code>
@@ -259,6 +290,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>数据库原始值</p>                                </div>
                 <div class="tags">
             
             
@@ -269,7 +302,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setOriginalValue">
-        <div class="location">at         line 30</div>
+        <div class="location">at         line 53</div>
         <code>                    
     <strong>setOriginalValue</strong>($originalValue)
         </code>
@@ -278,6 +311,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>数据库原始值</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -298,7 +333,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getNewValue">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 63</div>
         <code>                    
     <strong>getNewValue</strong>()
         </code>
@@ -307,6 +342,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>当前表单中提交的值</p>                                </div>
                 <div class="tags">
             
             
@@ -317,7 +354,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setNewValue">
-        <div class="location">at         line 42</div>
+        <div class="location">at         line 71</div>
         <code>                    
     <strong>setNewValue</strong>($value)
         </code>
@@ -326,6 +363,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>当前表单中提交的值，不推荐在 Lego 外部调用，也就是不推荐在 Lego 外部修改</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -346,7 +385,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDisplayValue">
-        <div class="location">at         line 49</div>
+        <div class="location">at         line 81</div>
         <code>                    
     <strong>getDisplayValue</strong>()
         </code>
@@ -355,6 +394,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>获取只读模式下展示给用户的值</p>                                </div>
                 <div class="tags">
             
             
@@ -365,7 +406,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setDisplayValue">
-        <div class="location">at         line 54</div>
+        <div class="location">at         line 89</div>
         <code>                    
     <strong>setDisplayValue</strong>($displayValue)
         </code>
@@ -374,6 +415,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>设置只读模式下展示给用户的值</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -394,7 +437,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_default">
-        <div class="location">at         line 61</div>
+        <div class="location">at         line 99</div>
         <code>                    
     <strong>default</strong>($value)
         </code>
@@ -403,6 +446,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>当前 Field 的默认值</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -423,7 +468,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDefaultValue">
-        <div class="location">at         line 68</div>
+        <div class="location">at         line 106</div>
         <code>                    
     <strong>getDefaultValue</strong>()
         </code>
@@ -441,10 +486,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_takeDefaultInputValue">
-        <div class="location">at         line 81</div>
+                    <h3 id="method_takeInputValue">
+        <div class="location">at         line 114</div>
         <code>                    
-    <strong>takeDefaultInputValue</strong>()
+    <strong>takeInputValue</strong>()
         </code>
     </h3>
     <div class="details">
@@ -452,7 +497,7 @@
     
 
                     <div class="method-description">
-                                    <p>输入框中显示给用户的值</p>                                </div>
+                                    <p>用户输入时展示给用户的默认值</p>                                </div>
                 <div class="tags">
             
             
@@ -462,18 +507,104 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_takeDefaultShowValue">
-        <div class="location">at         line 90</div>
+                    <h3 id="method_takeShowValue">
+        <div class="location">at         line 128</div>
         <code>                    
-    <strong>takeDefaultShowValue</strong>()
+    <strong>takeShowValue</strong>()
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>只读模式下展示给用户的值</p>                                </div>
                 <div class="tags">
             
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mutateTakingValue">
+        <div class="location">at         line 148</div>
+        <code>            protected        mixed
+    <strong>mutateTakingValue</strong>($value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>数据读取时，将通过此函数进行必要变形</p>                    <p>例如：
+ - Date 提交的数据一般为 Carbon 对象，展示时需要将其转换为特定 format
+ - checkbox group 在数据库中存储的值为字符串，使用时需要将其转化为 array</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mutateSavingValue">
+        <div class="location">at         line 162</div>
+        <code>            protected        mixed
+    <strong>mutateSavingValue</strong>($value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Request 中提交的数据在存储前，将通过此函数进行必要的变形</p>                    <p>例如：
+ checkbox group 选择多个值时，Request 中拿到的结果为 array，
+ 可在此函数中将 array 按需求转换为字符串等目标数据结构</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
